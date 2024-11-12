@@ -72,20 +72,21 @@ const HomeScreen:FC<HomeProps>=()=>{
  
 </div>
 <div className='featureSection'>
- <div className='featursStyle px-3 mx-2'>
+  <div className='featurePadding'>
+  <div className='featursStyle px-3 mx-2'>
     <h1 className='text-white'>OUR FEATURES</h1>
     <p className='text-white paragraphText'>There are many variations of passages of lorem Ipsum available, but the majority have suffered alteration.</p>
   </div>
   <div className='container-fluid containerFeatureicon'>
   <div className='row'>
-<div className='col-md-3 col-12'>
+<div className='col-md-3 col-12 col-sm-6'>
   <div className='featureWrapper'>
   <img src={'https://gymbulldozer.netlify.app/static/media/features1.6205017e.svg'} className=''/>
 <h1 className='featurefonts'>Weightlifting</h1>
 <p className='featureParagraphfont'>There are many variations of passages of lorem Ipsum available.</p>
   </div>
 </div>
-<div className='col-md-3 col-12'>
+<div className='col-md-3 col-12 col-sm-6'>
   <div className='featureWrapper'>
 <img src={'https://gymbulldozer.netlify.app/static/media/features2.d0f9843c.svg'} className=''/>
 
@@ -95,7 +96,7 @@ const HomeScreen:FC<HomeProps>=()=>{
   </div>
   
 </div>
-<div className='col-md-3 col-12'>
+<div className='col-md-3 col-12 col-sm-6'>
   <div className='featureWrapper'>
   <img src={'https://gymbulldozer.netlify.app/static/media/features3.c4c60cd2.svg'} className=''/>
   
@@ -104,7 +105,7 @@ const HomeScreen:FC<HomeProps>=()=>{
   </div>
 
 </div>
-<div className='col-md-3 col-12'>
+<div className='col-md-3 col-12 col-sm-6'>
   <div className='featureWrapper'>
   <img src={'https://gymbulldozer.netlify.app/static/media/features4.f8adc4e0.svg'} className=''/>
   
@@ -116,8 +117,71 @@ const HomeScreen:FC<HomeProps>=()=>{
   </div>
 
 </div>
+  </div>
+ 
 </div>
+<div className='offerSection container-fluid'>
+  <div className='row'>
+  <div className='col-0 my-5 col-md-7'>
+  <div>
+  <h1 className='offerSectionText'>A BIG OFFER FOR<br/>THIS SUMMER</h1>
 
+  </div>
+  <div>
+    <h2 className='offerSectionText1'>50% Off</h2>
+  </div>
+  <div>
+  <p className='text-white paragraphText'>There are many variations of passages of lorem Ipsum available, but the majority have suffered alteration.</p>
+
+  </div>
+  <div>
+  <button className="btn btn-danger my-2 my-sm-0 px-5 py-3 " type="submit">JOIN US</button>
+
+  </div>
+</div>
+<div className='col-12  col-md-5'>
+  
+</div>
+  </div>
+
+</div>
+<div className='featureSection'>
+  <div className='featurePadding'>
+  <div className='featursStyle px-3 mx-2'>
+    <h1 className='text-white'>OUR FEATURES</h1>
+    <p className='text-white paragraphText'>There are many variations of passages of lorem Ipsum available, but the majority have suffered alteration.</p>
+  </div>
+<div className='container-fluid'>
+  <div className='row'>
+<div className='col-md-4 col-12'>
+<div className='pricingCard'>
+<div>
+  <h2>Begginer</h2>
+  <h3>42K</h3>
+</div>
+</div>
+</div>
+<div className='col-md-4 col-12'>
+<div className='pricingCard'>
+<div>
+  <h2>Expert</h2>
+  <h3>52K</h3>
+</div>
+</div>
+</div>
+<div className='col-md-4 col-12'>
+<div className='pricingCard'>
+<div>
+  <h2>Pro</h2>
+  <h3>62K</h3>
+</div>
+</div>
+</div>
+  </div>
+</div>
+  </div>
+ 
+</div>
 </div>
     )
 }
