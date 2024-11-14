@@ -14,7 +14,7 @@ const HomeScreen:FC<HomeProps>=()=>{
    
 
     <nav className="navbar navbar-light   justify-content-between mx-5 NavBarStyle ">
-  <a className="navbar-brand">    <img src={'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTM3kn0XSlMbnnK3jjc0O0ZoXblmYXxhHo-aw&s'} className='imageStyle'/>
+  <a className="navbar-brand">    <img src={'https://e7.pngegg.com/pngimages/849/757/png-clipart-mr-olympia-physical-fitness-fitness-centre-bodybuilding-bench-bodybuilding-physical-fitness-hand-thumbnail.png'} className='imageStyle'/>
   </a>
   <div className='container  d-flex ListStyle col-6'>
         <a className='ListTag'>HOME</a>
@@ -79,6 +79,7 @@ const HomeScreen:FC<HomeProps>=()=>{
   </div>
   <div className='container-fluid containerFeatureicon'>
   <div className='row'>
+   
 <div className='col-md-3 col-12 col-sm-6'>
   <div className='featureWrapper'>
   <img src={'https://gymbulldozer.netlify.app/static/media/features1.6205017e.svg'} className=''/>
@@ -120,9 +121,10 @@ const HomeScreen:FC<HomeProps>=()=>{
   </div>
  
 </div>
-<div className='offerSection container-fluid'>
-  <div className='row'>
-  <div className='col-0 my-5 col-md-7'>
+<div className='offerSection container-fluid  '>
+  <div className='row '>
+    
+  <div className='col-0  col-md-7 overLayContent'>
   <div>
   <h1 className='offerSectionText'>A BIG OFFER FOR<br/>THIS SUMMER</h1>
 
@@ -152,35 +154,95 @@ const HomeScreen:FC<HomeProps>=()=>{
     <p className='text-white paragraphText'>There are many variations of passages of lorem Ipsum available, but the majority have suffered alteration.</p>
   </div>
 <div className='container-fluid'>
-  <div className='row'>
-<div className='col-md-4 col-12'>
+  <div className='row '>
+<div className='col-md-4 col-12 d-flex justify-content-center my-2'>
 <div className='pricingCard'>
-<div>
-  <h2>Begginer</h2>
-  <h3>42K</h3>
+<div className='py-2 bootomBarContainer'>
+  <h2 className='textColor'>Begginer</h2>
+  <h3 className='websitePrimaryColor'>$42</h3>
+</div>
+<div className='row '>
+ <span className='py-3 textColor'>24h unlimited access</span>
+ <span className='textColor'>Trainer advice</span>
+
+</div>
+<div className='row py-4'>
+ <span className='py-2 secondaryText'>Locker + Bathroom</span>
+ <span className='py-2 secondaryText'>Personal Trainer</span>
+
+</div>
+<div className='py-3'>
+<button className="btn btn-danger my-2 my-sm-0 px-4 py-3 " type="submit">JOIN US</button>
+
+</div>
+
 </div>
 </div>
-</div>
-<div className='col-md-4 col-12'>
+<div className='col-md-4 col-12 d-flex justify-content-center my-2'>
 <div className='pricingCard'>
-<div>
-  <h2>Expert</h2>
-  <h3>52K</h3>
+<div className='py-2 bootomBarContainer'>
+  <h2 className='textColor'>Expert</h2>
+  <h3 className='websitePrimaryColor'>$52</h3>
+</div>
+<div className='row '>
+ <span className='py-3 textColor'>24h unlimited access</span>
+ <span className='textColor'>Trainer advice</span>
+
+</div>
+<div className='row py-4'>
+ <span className='py-2 secondaryText'>Locker + Bathroom</span>
+ <span className='py-2 secondaryText'>Personal Trainer</span>
+
+</div>
+<div className='py-3'>
+<button className="btn btn-danger my-2 my-sm-0 px-4 py-3 " type="submit">JOIN US</button>
+
+</div>
+
 </div>
 </div>
-</div>
-<div className='col-md-4 col-12'>
+<div className='col-md-4 col-12 d-flex justify-content-center my-2'>
 <div className='pricingCard'>
-<div>
-  <h2>Pro</h2>
-  <h3>62K</h3>
+<div className='py-2 bootomBarContainer'>
+  <h2 className='textColor'>Pro</h2>
+  <h3 className='websitePrimaryColor'>$62</h3>
 </div>
+<div className='row '>
+ <span className='py-3 textColor'>24h unlimited access</span>
+ <span className='textColor'>Trainer advice</span>
+
+</div>
+<div className='row py-4'>
+ <span className='py-2 secondaryText'>Locker + Bathroom</span>
+ <span className='py-2 secondaryText'>Personal Trainer</span>
+
+</div>
+<div className='py-3'>
+<button className="btn btn-danger my-2 my-sm-0 px-4 py-3 " type="submit">JOIN US</button>
+
+</div>
+
 </div>
 </div>
   </div>
 </div>
   </div>
  
+</div>
+<div className='container-fluid trainerSection'>
+<div className='row'>
+<div className='col-md-4 col-12'>
+<img  className='trainerImage'/>
+</div>
+<div className='col-md-4 col-12'>
+<img  className='trainerImage' src='https://img.freepik.com/premium-photo/man-trainer-gym-portrait-landscape_427757-9577.jpg'/>
+
+</div>
+<div className='col-md-4 col-12'>
+<img  className='trainerImage'/>
+
+</div>
+</div>
 </div>
 </div>
     )
