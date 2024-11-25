@@ -230,16 +230,32 @@ const HomeScreen:FC<HomeProps>=()=>{
  
 </div>
 <div className='container-fluid trainerSection'>
-<div className='row'>
-<div className='col-md-4 col-12'>
-<img  className='trainerImage'/>
+<div className='row mx-4 mt-5'>
+<div className='col-md-4 col-12 '>
+<div className='trainerImage1 mx-5'>
+
 </div>
-<div className='col-md-4 col-12'>
-<img  className='trainerImage' src='https://img.freepik.com/premium-photo/man-trainer-gym-portrait-landscape_427757-9577.jpg'/>
+{/* <img  className='trainerImage' src={'https://img.freepik.com/premium-photo/beautiful-athletic-woman-smiling-fitness-trainer-gym-sportswoman-body-building-work-out_826801-5780.jpg'}/> */}
+<h3 className='TrainerText'>Joel</h3>
+<h6 className='TrainerText'>Traine</h6>
 
 </div>
 <div className='col-md-4 col-12'>
-<img  className='trainerImage'/>
+<div className='trainerImage2 mx-5' >
+
+</div>
+{/* <img  className='trainerImage' src='https://t3.ftcdn.net/jpg/06/45/17/94/360_F_645179444_EtQDcQw5Mcyv1MSH25K5FrEkb3LfH5Vk.jpg'/> */}
+<h3 className='TrainerText'>Jack rock</h3>
+<h6 className='TrainerText'>Traine</h6>
+
+</div>
+<div className='col-md-4 col-12'>
+<div className='trainerImage3 mx-5'>
+
+</div>
+{/* <img  className='trainerImage' src={'https://img.freepik.com/free-photo/portrait-handsome-man_23-2150770957.jpg'}/> */}
+<h3 className='TrainerText'>Rocky</h3>
+<h6 className='TrainerText'>Traine</h6>
 
 </div>
 </div>
