@@ -230,10 +230,23 @@ const HomeScreen:FC<HomeProps>=()=>{
  
 </div>
 <div className='container-fluid trainerSection'>
+  <div className=''>
+    <h1 className='trainerTextCol'>OUR TRAINER'S</h1>
+    <p className='paragraph'>There are many variations of passages of lorem Ipsum available, but the majority have suffered alteration.</p>
+
+  </div>
 <div className='row mx-4 mt-5'>
 <div className='col-md-4 col-12 '>
 <div className='trainerImage1 mx-5'>
+<div className='Social'>
+<div  className='d-flex  justify-content-center'>
+  <div className='roundedDiv'><img src={'https://cdn-icons-png.flaticon.com/128/20/20837.png'} className='SocialIconFaceboo' /></div>
+  <div className='roundedDiv'><img src={'https://cdn-icons-png.flaticon.com/128/5968/5968958.png'} className='SocialIconFaceboo' /></div>
 
+  <div className='roundedDiv'><img src={'https://cdn-icons-png.flaticon.com/128/717/717392.png'} className='SocialIconFaceboo' /></div>
+
+</div>
+</div>
 </div>
 {/* <img  className='trainerImage' src={'https://img.freepik.com/premium-photo/beautiful-athletic-woman-smiling-fitness-trainer-gym-sportswoman-body-building-work-out_826801-5780.jpg'}/> */}
 <h3 className='TrainerText'>Joel</h3>
@@ -241,8 +254,16 @@ const HomeScreen:FC<HomeProps>=()=>{
 
 </div>
 <div className='col-md-4 col-12'>
-<div className='trainerImage2 mx-5' >
+<div className='trainerImage2 mx-5'>
+<div className='Social'>
+<div  className='d-flex  justify-content-center'>
+  <div className='roundedDiv'><img src={'https://cdn-icons-png.flaticon.com/128/20/20837.png'} className='SocialIconFaceboo' /></div>
+  <div className='roundedDiv'><img src={'https://cdn-icons-png.flaticon.com/128/5968/5968958.png'} className='SocialIconFaceboo' /></div>
 
+  <div className='roundedDiv'><img src={'https://cdn-icons-png.flaticon.com/128/717/717392.png'} className='SocialIconFaceboo' /></div>
+
+</div>
+</div>
 </div>
 {/* <img  className='trainerImage' src='https://t3.ftcdn.net/jpg/06/45/17/94/360_F_645179444_EtQDcQw5Mcyv1MSH25K5FrEkb3LfH5Vk.jpg'/> */}
 <h3 className='TrainerText'>Jack rock</h3>
@@ -251,7 +272,15 @@ const HomeScreen:FC<HomeProps>=()=>{
 </div>
 <div className='col-md-4 col-12'>
 <div className='trainerImage3 mx-5'>
+<div className='Social'>
+<div  className='d-flex  justify-content-center'>
+  <div className='roundedDiv'><img src={'https://cdn-icons-png.flaticon.com/128/20/20837.png'} className='SocialIconFaceboo' /></div>
+  <div className='roundedDiv'><img src={'https://cdn-icons-png.flaticon.com/128/5968/5968958.png'} className='SocialIconFaceboo' /></div>
 
+  <div className='roundedDiv'><img src={'https://cdn-icons-png.flaticon.com/128/717/717392.png'} className='SocialIconFaceboo' /></div>
+
+</div>
+</div>
 </div>
 {/* <img  className='trainerImage' src={'https://img.freepik.com/free-photo/portrait-handsome-man_23-2150770957.jpg'}/> */}
 <h3 className='TrainerText'>Rocky</h3>

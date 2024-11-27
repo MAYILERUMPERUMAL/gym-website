@@ -245,7 +245,7 @@ height: 100vh;
 .trainerSection {
     background-image: 
         radial-gradient(rgba(181, 8, 8, 0.38) 0%, rgba(0, 0, 0, 0.6) 100%), 
-        url('https://wallpapercat.com/w/full/b/e/0/1146978-3840x2160-desktop-4k-bodybuilding-background.jpg');
+        url('https://gymbulldozer.netlify.app/static/media/HeroImage.2cc645e7.png');
     background-repeat: no-repeat;
     background-size:cover;
      align-content: center;
@@ -254,10 +254,11 @@ height: 100vh;
 }
 
 .trainerImage1{
- background-image: url('https://images.pexels.com/photos/1431283/pexels-photo-1431283.jpeg');
+ background-image: url('https://gymbulldozer.netlify.app/static/media/trainer3.69074cb0.png');
  background-repeat: no-repeat;
   /* background-color:black; */
  background-size: cover;
+ transition: 300ms ease-in-out;
  /* width: 100vw; */
  height: 400px;
  /* width:400px; */
@@ -265,9 +266,20 @@ height: 100vh;
 
 
 }
+.Social{
+    width: 100%;
+  height: 90%;
+}
+.Social:hover{
+  height: 100%;
+
+    background-color: rgb(0,0,0,0.5);
+    transition: 300ms ease-in-out;
+
+}
 
 .trainerImage2{
-    background-image: url('https://images.pexels.com/photos/1431283/pexels-photo-1431283.jpeg');
+    background-image: url('https://gymbulldozer.netlify.app/static/media/trainer.2649ade7.png');
     background-repeat: no-repeat;
  /* background-color:black; */
 background-size:cover;
@@ -277,7 +289,7 @@ height: 400px;
 
 }
 .trainerImage3{
-    background-image: url('https://images.pexels.com/photos/1431283/pexels-photo-1431283.jpeg');
+    background-image: url('https://gymbulldozer.netlify.app/static/media/trainer2.0f869951.png');
     background-repeat: no-repeat;
      /* background-color:black; */
     background-size:cover;
@@ -312,4 +324,28 @@ flex-direction: column;
 }
 .TrainerText{
     color: white;
+}
+.SocialIconFaceboo{
+    height: 20px;
+    width: 20px;
+    filter: brightness(0) invert(1);
+}
+.roundedDiv{
+    height: 40px;
+    margin-right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    border: 1px solid white; /* Combines border-color and border-width */
+    border-radius: 20px;
+}
+.Social{
+    align-content: center;
+}
+.trainerTextCol{
+   color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 20px 0px 0px;
+    font-size: 3rem;
 }
