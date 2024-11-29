@@ -289,6 +289,32 @@ const HomeScreen:FC<HomeProps>=()=>{
 </div>
 </div>
 </div>
+<div className='container-fluid TrainingSesion'>
+<div className="row row-cols-2">
+    <div className="col-12 col-md-6 imageBackground1">
+      <div>
+      <h2 className='trainerTextCol'>Functional Training</h2>
+<p>Functional training focuses on improving strength, balance, Train smarter to build a resilient, stronger body that thrives in everyday life.</p>
+<button className="btn btn-danger my-2 my-sm-0 px-4 py-3 " type="submit">Find More</button>
+
+      </div>
+    </div>
+    <div className="col-12 col-md-6 imageBackground2">
+<h2 className='trainerTextCol'>Fitness BootCamp</h2>
+<p>Fitness bootcamps provide high-intensity workouts that build strength, endurance, and agility for both men and women.</p>
+<button className="btn btn-danger my-2 my-sm-0 px-4 py-3 " type="submit">Find More</button>
+
+    </div>
+    <div className="col-12 col-md-6 imageBackground3">
+<h2 className='trainerTextCol'>Body transformation</h2>
+
+    </div>
+    <div className="col-12 col-md-6 imageBackground4">
+<h2 className='trainerTextCol'>Cardio training</h2>
+
+    </div>
+  </div>
+</div>
 </div>
     )
 }
