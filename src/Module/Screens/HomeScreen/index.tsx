@@ -36,6 +36,19 @@ const HomeScreen:FC<HomeProps>=()=>{
   <button className="btn btn-outline-danger my-2 my-sm-0 px-5 py-3 d-none d-md-block" type="submit">JOIN US</button>
 </form>
 
+      {/* <div className='container  d-flex ListStyle col-6'>
+        <a className='ListTag'>HOME</a>
+        <a className='ListTag'>ABOUT</a>
+        <a className='ListTag'>PRICING</a>
+        <a className='ListTag'>GALLERY</a>
+        <a className='ListTag'>SUBSCRIBE</a>
+        
+
+    </div>
+  <form className="form-inline">
+    
+    <button className="btn btn-outline-danger my-2 my-sm-0 px-5 py-3 " type="submit">JOIN US</button>
+  </form> */}
 
       {/* Toggle Button */}
       <button className="navbar-toggler" type="button" onClick={toggleDrawer}>
