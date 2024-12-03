@@ -6,6 +6,7 @@ background-attachment: fixed;
 background-size: cover;
 /* width: 100vw; */
 height: 100vh;
+transform: scale(1);
 
 }
 .appConatiner{
@@ -24,7 +25,8 @@ height: 100vh;
 .Overlay{
     position: absolute;
     inset: 0px;
-    background: radial-gradient(rgba(181, 8, 8, 0.38) 0%, rgba(0, 0, 0, 0.6) 100%);
+    background:  radial-gradient(rgba(150, 8, 8, 0.20) 0%, rgba(0, 0, 0, 0.6) 100%);
+    /* background-color: rgb(20,20,20); */
    
 }
 .ListTag {
@@ -355,15 +357,18 @@ flex-direction: column;
 
 }
 .imageBackground1{
+    padding: 0;
     background-image: url('https://rare-gallery.com/uploads/posts/860715-Men-Fitness-Dumbbells.jpg');
     background-repeat: no-repeat;
      /* background-color:black; */
     background-size:cover;
+overflow-x: hidden;
     /* width: 100vw; */
     height: 75vh;
     /* width:400px; */
 }
 .imageBackground2{
+    padding: 0;
     background-image: url('https://img.rasset.ie/000fae50-500.jpg');
     background-repeat: no-repeat;
      /* background-color:black; */
@@ -374,6 +379,7 @@ flex-direction: column;
 }
 
 .imageBackground3{
+    padding: 0;
     background-image: url('https://img.freepik.com/premium-photo/handsome-model-young-man-workout-gym_174475-1503.jpg');
     background-repeat: no-repeat;
      /* background-color:black; */
@@ -384,6 +390,7 @@ flex-direction: column;
 }
 
 .imageBackground4{
+    padding: 0;
     background-image: url('https://media.istockphoto.com/id/1132086660/photo/side-view-of-beautiful-muscular-woman-running-on-treadmill.jpg?s=612x612&w=0&k=20&c=5Vq_BJjG7sbIyKIP-Adu0pChReDXm0dC7BVPvto2M0I=');
     background-repeat: no-repeat;
      /* background-color:black; */
@@ -392,3 +399,220 @@ flex-direction: column;
     height: 75vh;
     /* width:400px; */
 }
+
+.TrainingsectionSubText{
+    font-size: 16px !important;
+    color: #FFFFFF !important;
+    text-align: center !important;
+    z-index: 0 !important;
+    padding-bottom: 20px;
+}
+.TrainerSectionTextView{
+  width: 400px;
+/* background-color: #dc3545; */
+}
+.TrainerSectionImagePositionView{
+    /* background-color:#FFFFFF; */
+    height: 75vh;
+    width: 100%;
+    justify-items: center;
+    align-content: center;
+    background-color: rgb(0,0,0,0.5);
+}
+/* .TrainerSectionImagePositionView:hover{
+    background-color: rgb(0,0,0,0.8);
+    transition: 300ms ease-in-out;
+    overflow: hidden;
+} */
+
+
+.WelcomeSection{
+    /* height: 100vh; */
+   background:  radial-gradient(rgba(150, 8, 8, 0.20) 0%, rgba(0, 0, 0, 0.6) 100%);
+    background-color: rgb(20,20,20);
+}
+.WelcomeSectionImage{
+    height: 300px;
+}
+.WelcomeSectionText{
+   color: white;
+}
+.WelcomeSectionText1{
+    color: #dc3545
+ }
+ .welcomeSectionTextParent{
+   width: 500px;
+ }
+ .welcomeSectionParent1{
+   justify-content: center;
+   align-items: center;
+
+   display: flex;
+    /* background-color: aquamarine; */
+    height: 100vh;
+ }
+ .imageWelocome{
+    background-image: url('https://i.pinimg.com/originals/62/d5/63/62d563f804c8d0656b3825b8a6668e9f.jpg');
+    background-repeat: no-repeat;
+     /* background-color:black; */
+    background-size:contain;
+    /* width: 100vw; */
+    height: 76vh;
+    overflow: hidden;
+    background-color: antiquewhite;
+    width: 460px;
+    /* width:auto; */
+    border-top-left-radius: 50px;
+    /* border-bottom-left-radius:20px; */
+    border-bottom-right-radius: 50px;
+ }
+.mkl{
+   display:flex;
+   justify-content: center;
+   align-items: center;
+}
+.ContactSection{
+    background-image: url('https://wallpapers-hub.art/wallpaper-images/720304.jpg');
+    background-repeat: no-repeat;
+     /* background-color:black; */
+    background-size:cover;
+    height: 100vh;
+}
+.ContactSection1{
+    height: 100vh;
+    justify-content: center;
+   /* background-color: #dc3545; */
+   /* justify-self: center; */
+    background:  radial-gradient(rgba(150, 8, 8, 0.20) 0%, rgba(0, 0, 0, 0.6) 100%);
+    /* background-color: rgb(20,20,20); */
+}
+.InputConatiner{
+    height: 40px;
+    background-color: white;
+
+    width: 350px;
+    margin-bottom: 10px;
+}
+.InputConatiner1{
+    background-color: white;
+    height: 150px;
+    width: 350px;
+    margin-bottom: 20px;
+}
+.InputViewr{
+    height: 40px;
+    width: 350px;  
+}
+.InputViewr1{
+    height: 150px;
+    width: 350px;  
+}
+.inputContainer{
+    height: 75vh;
+    width: 600px;
+    /* background-color: aqua; */
+   justify-items: center;
+}
+.buttonWidth{
+    width:450px ;
+}
+.ConatctBranch{
+    background-color:rgb(9,1,1);
+}
+.TextEnq{
+    color:white;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+    /* font-size: ; */
+}
+.Conatactus1{
+
+}
+.ConatctImg{
+    height: 80px;
+    width: 80px;
+    border-radius: 10px;
+}
+.Contactheight{
+    height: 50vh;
+}
+.contactPng1{
+    height:20px ;
+    width: 20px;
+}
+.contactSub1{
+  height: 300px;
+  width: 200px;
+  /* background-color: aquamarine; */
+}
+
+.ConatactSubHead{
+    padding: 4px;
+  text-align: start;
+    margin-top: 5px;
+    border-left: none;
+    border-right: none;
+    transform: scaleY(0.9); 
+}
+.BulletList{
+    padding: 0px;
+}
+.UnderList1{
+    text-align: start;
+}
+.UnderList2{
+    text-align: start;
+    padding-left: 10px;
+}
+.BulletList1{
+    list-style: none;
+    text-align: start;
+  
+
+}
+.contactTextStyle{
+    font-family: 'Roboto', Helvetica, Arial, Lucida, sans-serif;
+    font-weight: 700;
+    font-size: 19px;
+    color: #ce271d !important;
+}
+.ImageCont{
+    background-image: url('https://pbs.twimg.com/profile_images/970153676974178304/DQSkK-bV_400x400.jpg');
+    background-repeat: no-repeat;
+     /* background-color:black; */
+    background-size:contain;
+    /* width: 100vw; */
+    height: 250px;
+    overflow: hidden;
+}
+.side-drawer {
+    height: 90vh;
+    width: 300px;
+    position: fixed;
+    top: 0;
+    right: 0px;  /* Initially position off-screen on the right */
+    left:-300px;
+    /* background: rgb(15,6,6); */
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    z-index: 200;
+    transition: left 0.3s ease-out;
+    padding: 20px;
+  }
+  
+  .side-drawer.open {
+    left: 0;  /* When open, move it to the right side */
+  }
+  
+  .nav-item {
+    margin: 10px 0;
+  }
+  
+  .backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+  }
+  

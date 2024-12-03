@@ -1,8 +1,13 @@
-import React,{FC} from 'react'
+import React,{FC,useState} from 'react'
 import { HomeProps } from './interface'
 import  './HomeScreen.css'
-import { Button } from '../../../Components'
+import { Button, TextInput } from '../../../Components'
 const HomeScreen:FC<HomeProps>=()=>{
+  const [drawerOpen, setDrawerOpen] = useState(false);
+
+  const toggleDrawer = () => {
+    setDrawerOpen(!drawerOpen);
+  };
     return(
 <div className='appConatiner'>
     
@@ -11,25 +16,65 @@ const HomeScreen:FC<HomeProps>=()=>{
   
     
    <div className='Overlay'>
+   <nav className="navbar navbar-light justify-content-between mx-5 NavBarStyle">
+      <a className="navbar-brand">
+        <img
+          src="https://e7.pngegg.com/pngimages/849/757/png-clipart-mr-olympia-physical-fitness-fitness-centre-bodybuilding-bench-bodybuilding-physical-fitness-hand-thumbnail.png"
+          className="imageStyle"
+          alt="logo"
+        />
+      </a>
+      <div className="container d-flex ListStyle col-6">
+  <a className="ListTag d-none d-md-block">HOME</a>
+  <a className="ListTag d-none d-md-block">ABOUT</a>
+  <a className="ListTag d-none d-md-block">PRICING</a>
+  <a className="ListTag d-none d-md-block">GALLERY</a>
+  <a className="ListTag d-none d-md-block">SUBSCRIBE</a>
+</div>
+<form className="form-inline">
+  {/* <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"> */}
+  <button className="btn btn-outline-danger my-2 my-sm-0 px-5 py-3 d-none d-md-block" type="submit">JOIN US</button>
+</form>
+
+
+      {/* Toggle Button */}
+      <button className="navbar-toggler" type="button" onClick={toggleDrawer}>
+        <span className="navbar-toggler-icon">
    
+        </span>
+      </button>
 
-    <nav className="navbar navbar-light   justify-content-between mx-5 NavBarStyle ">
-  <a className="navbar-brand">    <img src={'https://e7.pngegg.com/pngimages/849/757/png-clipart-mr-olympia-physical-fitness-fitness-centre-bodybuilding-bench-bodybuilding-physical-fitness-hand-thumbnail.png'} className='imageStyle'/>
-  </a>
-  <div className='container  d-flex ListStyle col-6'>
-        <a className='ListTag'>HOME</a>
-        <a className='ListTag'>ABOUT</a>
-        <a className='ListTag'>PRICING</a>
-        <a className='ListTag'>GALLERY</a>
-        <a className='ListTag'>SUBSCRIBE</a>
-        
+      {/* Drawer */}
+      <div
+        className={`side-drawer ${drawerOpen ? 'open' : ''}`}
+        onClick={() => setDrawerOpen(false)}
+      >
+        <div className='Overlay'>
+        <ul className="navbar-nav">
+          <li className="nav-item ">
+            <a className="nav-link text-white" href="#">
+              HOME
+            </a>
+          </li>
+          <li className="nav-item ">
+            <a className="nav-link text-white" href="#">
+              ACCOUNTS
+            </a>
+          </li>
+          <li className="nav-item ">
+            <a className="nav-link text-white" href="#">
+              ABOUT
+            </a>
+          </li>
+        </ul>
+        </div>
+      </div>
 
-    </div>
-  <form className="form-inline">
-    {/* <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"> */}
-    <button className="btn btn-outline-danger my-2 my-sm-0 px-5 py-3 " type="submit">JOIN US</button>
-  </form>
-</nav>
+      {/* Overlay for closing drawer */}
+      {drawerOpen && <div className="backdrop" onClick={toggleDrawer}></div>}
+    </nav>
+
+   
 <div className='Container5'>
   <div className='Container6'>
   <h2 className='mainText'>BUILD UP YOUR</h2>
@@ -42,6 +87,26 @@ const HomeScreen:FC<HomeProps>=()=>{
 
 </div>
 
+</div>
+<div className='WelcomeSection container-fluid'>
+<div className='row'>
+  
+  <div className='col-12 col-md-6 mkl'>
+    <div className='imageWelocome'>
+
+    </div>
+</div>
+<div className='col-12 col-md-6 welcomeSectionParent1'>
+    <div className='welcomeSectionTextParent'>
+    <h1 className='WelcomeSectionText1'>Welcome to Weider Gym</h1>
+<p className='WelcomeSectionText'>it is a way of life. It is widely recognised as a premium that promotes a healthy lifestyle. It is one of the best fitness centers in Chennai, a preferred destination for several top-notch training programs.</p>
+<h5 className='WelcomeSectionText'>Our personalized designs will assist you in having the best time of your life. We provide various services such as functional training, fitness boot camp, body transformation, weight loss, and weight gain.</h5>
+<p className='WelcomeSectionText'>The goal of this venture was to provide the best fitness experience possible under the supervision of highly qualified and experienced professionals. SLAM Fitness Studio is growing across the city, ensuring a luxurious fitness experience, making it the best weight loss gym in Chennai.</p>
+    </div>
+
+{/* <img src={'https://i.ytimg.com/vi/yBQnMQsMUz4/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCwTkDDxZt7glFUuOuqx4ToL_4jdw'} className='WelcomeSectionImage'/> */}
+  </div>
+</div>
 </div>
 <div className="container-fluid contentContainer overflow-hidden">
   <div className="row">
@@ -84,7 +149,7 @@ const HomeScreen:FC<HomeProps>=()=>{
   <div className='featureWrapper'>
   <img src={'https://gymbulldozer.netlify.app/static/media/features1.6205017e.svg'} className=''/>
 <h1 className='featurefonts'>Weightlifting</h1>
-<p className='featureParagraphfont'>There are many variations of passages of lorem Ipsum available.</p>
+<p className='featureParagraphfont'>Unleash your strength and build muscle with our cutting-edge weightlifting features.</p>
   </div>
 </div>
 <div className='col-md-3 col-12 col-sm-6'>
@@ -92,7 +157,7 @@ const HomeScreen:FC<HomeProps>=()=>{
 <img src={'https://gymbulldozer.netlify.app/static/media/features2.d0f9843c.svg'} className=''/>
 
     <h1 className='featurefonts'>Specific Muscles</h1>
-    <p className='featureParagraphfont'>There are many variations of passages of lorem Ipsum available.</p>
+    <p className='featureParagraphfont'>Focus on building specific muscles with our expertly designed gym features.</p>
 
   </div>
   
@@ -102,7 +167,7 @@ const HomeScreen:FC<HomeProps>=()=>{
   <img src={'https://gymbulldozer.netlify.app/static/media/features3.c4c60cd2.svg'} className=''/>
   
   <h1 className='featurefonts'>Flex Your Muscles</h1>
-      <p className='featureParagraphfont'>There are many variations of passages of lorem Ipsum available.</p>
+      <p className='featureParagraphfont'>Flex your potential with our all-new muscle-focused gym features.</p>
   </div>
 
 </div>
@@ -111,7 +176,7 @@ const HomeScreen:FC<HomeProps>=()=>{
   <img src={'https://gymbulldozer.netlify.app/static/media/features4.f8adc4e0.svg'} className=''/>
   
   <h1 className='featurefonts'>Cardio Exercises</h1>
-      <p className='featureParagraphfont'>There are many variations of passages of lorem Ipsum available.</p>
+      <p className='featureParagraphfont'>Elevate your endurance with our dynamic cardio exercise features.</p>
   </div>
 
 </div>
@@ -291,29 +356,135 @@ const HomeScreen:FC<HomeProps>=()=>{
 </div>
 <div className='container-fluid TrainingSesion'>
 <div className="row row-cols-2">
-    <div className="col-12 col-md-6 imageBackground1">
-      <div>
+    <div className=" col-md-6 imageBackground1 ">
+    <div className='TrainerSectionImagePositionView'>
+
+      <div className='TrainerSectionTextView '>
+
       <h2 className='trainerTextCol'>Functional Training</h2>
-<p>Functional training focuses on improving strength, balance, Train smarter to build a resilient, stronger body that thrives in everyday life.</p>
+<p  className='TrainingsectionSubText'>Functional training focuses on improving strength, balance, Train smarter to build a resilient</p>
 <button className="btn btn-danger my-2 my-sm-0 px-4 py-3 " type="submit">Find More</button>
 
+      
+      </div>
       </div>
     </div>
     <div className="col-12 col-md-6 imageBackground2">
-<h2 className='trainerTextCol'>Fitness BootCamp</h2>
-<p>Fitness bootcamps provide high-intensity workouts that build strength, endurance, and agility for both men and women.</p>
+    <div className='TrainerSectionImagePositionView'>
+
+      <div className='TrainerSectionTextView '>
+
+      <h2 className='trainerTextCol'>Functional Training</h2>
+<p  className='TrainingsectionSubText'>Functional training focuses on improving strength, balance, Train smarter to build a resilient</p>
 <button className="btn btn-danger my-2 my-sm-0 px-4 py-3 " type="submit">Find More</button>
 
+      
+      </div>
+      </div>
     </div>
     <div className="col-12 col-md-6 imageBackground3">
-<h2 className='trainerTextCol'>Body transformation</h2>
+    <div className='TrainerSectionImagePositionView'>
+
+<div className='TrainerSectionTextView '>
+
+<h2 className='trainerTextCol'>Functional Training</h2>
+<p  className='TrainingsectionSubText'>Functional training focuses on improving strength, balance, Train smarter to build a resilient</p>
+<button className="btn btn-danger my-2 my-sm-0 px-4 py-3 " type="submit">Find More</button>
+
+
+</div>
+</div>
 
     </div>
     <div className="col-12 col-md-6 imageBackground4">
-<h2 className='trainerTextCol'>Cardio training</h2>
+    <div className='TrainerSectionImagePositionView'>
+
+<div className='TrainerSectionTextView '>
+
+<h2 className='trainerTextCol'>Functional Training</h2>
+<p  className='TrainingsectionSubText'>Functional training focuses on improving strength, balance, Train smarter to build a resilient</p>
+<button className="btn btn-danger my-2 my-sm-0 px-4 py-3 " type="submit">Find More</button>
+
+
+</div>
+</div>
 
     </div>
   </div>
+
+</div>
+<div className='ContactSection container-fluid'>
+<div className='ContactSection1 row'>
+<div className='inputContainer'>
+  <h1 className='TextEnq'>Enquiry</h1>
+ <TextInput value={''} placeholder={'Name'} onChangeText={()=>{}} isMultiline={false}/>
+ <TextInput value={''} placeholder={'Email'} onChangeText={()=>{}} isMultiline={false}/>
+
+ <TextInput value={''} placeholder={'Conatct'} onChangeText={()=>{}} isMultiline={false}/>
+ <TextInput value={''} placeholder={'Description'} onChangeText={()=>{}} isMultiline={true}/>
+ <button className="btn btn-danger my-1 my-sm-0 px-3 py-2 buttonWidth" type="submit">Enquiry</button>
+
+
+</div>
+{/* <div className='bg-primary'>ijiji</div> */}
+
+</div>
+</div>
+<div className='ConatctBranch container-fluid'>
+<div className='row'>
+  <div className='col-12 col-md-3 Contactheight'>
+<div className='Conatactus1'>
+<img src={'https://www.logotypes101.com/logos/39/CF43103376FEE2C7523450410536A5EF/weider.png'} className='ConatctImg'/>
+<div className='px-3'>
+<p>Weider is one of the best fitness centers in Chennai. Our customized designs will help to enjoy the best experience of your life.</p>
+
+</div>
+<h4>Follow us</h4>
+<div>
+  <img src={'https://cdn-icons-png.flaticon.com/128/2111/2111463.png'} className='contactPng1'/>
+  <img className='contactPng1' src={'https://cdn-icons-png.flaticon.com/128/15047/15047435.png'}/>
+</div>
+</div>
+  </div>
+  <div className='col-12 col-md-3'>
+<div className='contactSub1'>
+  <div className='ConatactSubHead'>
+  <h5 className='contactTextStyle'>Quick links</h5>
+
+  </div>
+<ul className='UnderList1'>
+  <li className='BulletList'>Home</li>
+  <li>About Us</li>
+  <li>Pricing</li>
+  <li>Gallery</li>
+  <li>Subscribe</li>
+
+</ul>
+</div>
+</div>
+<div className='col-12 col-md-3 '>
+<div className='contactSub1'>
+  <div className='ConatactSubHead'>
+  <h5 className='contactTextStyle'>For More Info</h5>
+
+  </div>
+<ul className='UnderList2'>
+  <li className='BulletList1'>Home</li>
+  <li className='BulletList1'>Mr Praveen kumar</li>
+  <li className='BulletList1'>P:91+ 9876543210</li>
+  <li className='BulletList1'>E:Praveen@gmail.com</li>
+  {/* <li></li> */}
+
+</ul>
+</div>
+</div>
+<div className='col-12 col-md-3 align-content-center'>
+<div className='ImageCont'>
+
+</div>
+</div>
+
+</div>
 </div>
 </div>
     )
