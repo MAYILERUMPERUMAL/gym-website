@@ -94,8 +94,8 @@ const HomeScreen:FC<HomeProps>=()=>{
   <h1 className='mainText1'>BODY SHAPE</h1>
   </div>
 
-<span className='css-y41f37'>What Hurts Today Makes You Strong Tommorow</span>
-<button className=' my-2 my-sm-0 px-5 py-0.2 fontStyleButton  rounded'>JOIN US</button>
+<span className='homeScreenParagraph'>What Hurts Today Makes You Strong Tommorow</span>
+<button className=' my-2 my-sm-0 px-5 py-0.2 fontStyleButton  StyleButton'>JOIN US</button>
 </div>
 
 </div>
@@ -111,7 +111,14 @@ const HomeScreen:FC<HomeProps>=()=>{
 </div>
 <div className='col-12 col-md-6 welcomeSectionParent1'>
     <div className='welcomeSectionTextParent'>
-    <h1 className='WelcomeSectionText1'>Welcome to Weider Gym</h1>
+    <h1 className='rotating-content text  '>Welcome to Weider Gym</h1>
+    <div className="rotating-content image">
+        <img
+          src="https://cdn-icons-png.flaticon.com/128/30/30924.png"
+          alt="Gym"
+          className="gym-image"
+        />
+      </div>
 <p className='WelcomeSectionText'>it is a way of life. It is widely recognised as a premium that promotes a healthy lifestyle. It is one of the best fitness centers in Chennai, a preferred destination for several top-notch training programs.</p>
 <h5 className='WelcomeSectionText'>Our personalized designs will assist you in having the best time of your life. We provide various services such as functional training, fitness boot camp, body transformation, weight loss, and weight gain.</h5>
 <p className='WelcomeSectionText'>The goal of this venture was to provide the best fitness experience possible under the supervision of highly qualified and experienced professionals. SLAM Fitness Studio is growing across the city, ensuring a luxurious fitness experience, making it the best weight loss gym in Chennai.</p>
