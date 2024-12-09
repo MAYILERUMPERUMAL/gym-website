@@ -1,0 +1,26 @@
+.pricingCard{
+    width: 100%;
+    max-width: 380px;
+    border: 3px solid black;
+    background: rgb(26, 26, 26);
+    text-align: center;
+    transition: 0.8s;
+}
+
+.pricingCard:hover{
+    border-color: red;
+    border-width: 3px;
+    border-style: solid;
+}
+.bootomBarContainer{
+    border-bottom: 1px solid rgb(49, 49, 49);
+}
+.textColor{
+    color:white
+}
+.websitePrimaryColor{
+    color:  red
+}
+.secondaryText{
+    color:rgb(122, 131, 139);
+}

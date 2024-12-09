@@ -1,16 +1,28 @@
 .Container1{
-background-image: url('https://images6.alphacoders.com/108/1082422.jpg');
+background-image: url('https://images.alphacoders.com/108/thumb-1920-1080977.jpg');
 background-repeat: no-repeat;
 background-attachment: fixed;
  /* background-color:black; */
 background-size: cover;
-margin: 0;
+/* background-position: calc(50% - -10px) center; */
+margin: 0px;
 /* width: 100vw; */
 height: 100vh;
 /* transform: scale(1); */
-z-index: -1;
-
+/* z-index: -1; */
 }
+.ssss{
+    transform: scale(1);  
+    z-index: -1;
+}
+.item {
+    height: 100vh; /* Full viewport height */
+    margin: 0;
+    background-size: cover; /* Ensure the image covers the container */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
 .appConatiner{
     display: block;
     unicode-bidi: isolate;
@@ -31,6 +43,22 @@ z-index: -1;
     /* background-color: rgb(20,20,20); */
    
 }
+.AboutContainer{
+  
+}
+.textAboutContent{
+    text-align: start;
+}
+.contColor{
+    background-color:  rgb(20,20,20)
+}
+.Overlay1{
+  position: absolute;
+  align-content:flex-end;
+
+    inset: 0px;
+    background:  radial-gradient(rgba(150, 8, 8, 0.20) 0%, rgba(0, 0, 0, 0.6) 100%);   
+}
 .ListTag {
     text-decoration: none; /* Remove default underline */
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -40,20 +68,87 @@ z-index: -1;
     transition: color 0.5s ease, border-bottom-color 0.5s ease;
     font-weight: 600;
 }
+.HomeContent{
+height: 100px;
+}
 
+.containerdd{
+    height: 100vh;
+    align-content: flex-end;
+
+   
+}
+.textContentcolor{
+    color:#dc3545;
+
+    
+}
+.textColor{
+    color:white
+}
+.textFontParagraph{
+    font-size: 0.9rem;
+}
+.chooseToggle{
+    background-color: #dc3545;
+    height: 30px;
+    border-radius: 5px;
+    margin: 5px;
+}
+.kjhkhk{
+    font-size: calc(1.52rem + 3vw);
+    font-weight: 700;
+    line-height: 1.2;
+
+}
+.contentParagraph{
+color:rgb(232,232,232)
+}
+.lllll{
+    font-size: calc(1.275rem + .1w);
+    font-weight: 600 !important;
+}
+.aboutUsContainer{
+    height: 250px;
+    /* width: 70%; */
+    margin-right: 20px;
+    margin-left: 20px;
+   background:  rgba(255, 255, 255, 0.03);
+    border-radius: 5px;
+    backdrop-filter: blur(8px);
+    border: 1px solid #333846;
+    transition: all 0.4s ease;
+   margin-left: 5px;
+}
+.marginBottom{
+    margin-top: 20px;
+}
+.TextLineHeight{
+    line-height: 25px;
+}
+.HomeContent1{
+    height: 300px;
+    /* background-color: #FFFFFF; */
+
+    text-align: start;
+}
 .ListTag:hover {
     color: #dc3545;/* Color on hover */
     border-bottom:  solid #dc3545;
     transition:color 0.8s ease, border-bottom-color 0.8s ease;
 
 }
-.NavBarStyle{
+.NavBarStyle {
     height: 150px;
-   /* background:  rgba(255, 255, 255, 0.03); */
-   /* backdrop-filter: blur(8px);
-   border:1px solid #333846; */
-    /* align-items:end; */
+    position: absolute;
+    top: 0;
+    left: 0; /* Ensure it starts at the left edge */
+    right: 0; /* Ensure it ends at the right edge */
+    z-index: 10; /* Ensure it appears above other elements */
+    color: white;
+    box-sizing: border-box; /* Includes padding and borders in width */
 }
+
 .Container5{
     display: flex;
     /* background-color: #dc3545; */
@@ -206,11 +301,14 @@ padding-bottom: 50px;
     font-size: 1.1rem;
 }
 .featureWrapper{
-    width: 100%;
+    /* width: 100%; */
     /* max-width: 220px; */
     text-align: center;
     padding: 1.8rem;
     transition: 0.8s;
+    border-color: black;
+    border-width: 3px;
+    border-style: solid;
 }
 .featureWrapper:hover{
      border-color: #dc3545;
@@ -241,19 +339,7 @@ height: 100vh;
     color: rgb(255, 255, 255);
     font-size: 2.6rem;
 }
-.pricingCard{
-    width: 100%;
-    max-width: 380px;
-    border: 1px solid red;
-    background: rgb(26, 26, 26);
-    text-align: center;
-}
 
-.pricingCard:hover{
-    border-color: red;
-    border-width: 3px;
-    border-style: solid;
-}
 .bootomBarContainer{
     border-bottom: 1px solid rgb(49, 49, 49);
 }
@@ -268,6 +354,10 @@ height: 100vh;
 
 .secondaryText{
     color:rgb(122, 131, 139);
+}
+.textSixe{
+    font-size: 4rem;
+
 }
 
 .offerContainer{
@@ -287,19 +377,7 @@ height: 100vh;
     height: 150vh;
 }
 
-.trainerImage1{
- background-image: url('https://gymbulldozer.netlify.app/static/media/trainer3.69074cb0.png');
- background-repeat: no-repeat;
-  /* background-color:black; */
- background-size: cover;
- transition: 300ms ease-in-out;
- /* width: 100vw; */
- height: 400px;
- /* width:400px; */
 
-
-
-}
 .Social{
     width: 100%;
   height: 90%;
@@ -356,28 +434,11 @@ flex-direction: column;
     transition: 300ms ease-in-out;
     overflow: hidden;
 }
-.TrainerText{
-    color: white;
-}
-.SocialIconFaceboo{
-    height: 20px;
-    width: 20px;
-    filter: brightness(0) invert(1);
-}
 
-.roundedDiv{
-    height: 40px;
-    margin-right: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    border: 1px solid white; /* Combines border-color and border-width */
-    border-radius: 20px;
-}
-.Social{
-    align-content: center;
-}
+
+
+
+
 .trainerTextCol{
    color: white;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -466,51 +527,31 @@ overflow-x: hidden;
 .WelcomeSectionImage{
     height: 300px;
 }
+.lppppppppp{
+    height: 200px;
+}
+.uhu{
+    height: 100px;
+}
 .WelcomeSectionText{
    color: white;
+   line-height: 25px;
+   -webkit-text-size-adjust: 100%;
+    vertical-align: baseline;
+    margin-bottom: 10px;
+    
 }
-
-  
-  .rotating-content {
-    /* position: absolute; */
-   
-    font-size: 2rem;
-    color: white;
-    backface-visibility: hidden; /* Hides back when rotated */
-    animation: rotateContent 4s infinite;
-  }
-  
-  .text {
-    animation-delay: 0s; /* Start immediately */
-  }
-  
-  .image {
-    animation-delay: 2s; /* Start after the text */
-  }
-  
-  .gym-image {
-    width: 10%;
-    height: 10%;
-    object-fit: cover;
-  }
-  
-  @keyframes rotateContent {
-    0%, 25% {
-      opacity: 1;
-      transform: rotateY(0deg);
-    }
-    50% {
-      opacity: 0;
-      transform: rotateY(90deg); /* Midpoint where rotation hides */
-    }
-    75%, 100% {
-      opacity: 1;
-      transform: rotateY(180deg); /* Complete rotation to show the next content */
-    }
-  }
-  
+.contentHeight{
+    height: 500px;
+}
+.WelcomeSectionText1{
+    color: #dc3545;
+    -webkit-text-size-adjust: 100%;
+    vertical-align: baseline;
+ }
  .welcomeSectionTextParent{
    width: 500px;
+
  }
  .welcomeSectionParent1{
    justify-content: center;

@@ -1,3 +1,5 @@
 export * from './Header'
 export * from './Button'
 export * from './TextInput'
+export *  from './PricingCard'
+export * from './TrainerCard'
