@@ -1,30 +1,85 @@
-import React,{useEffect,FC}   from 'react'
-import {PricingCardProps} from './interface'
-import './PricingCard.css'
-const PricingCard:FC<PricingCardProps>=({CardTitLe,CardSubTitle,monthlyPricing,ptPricing})=>{
-    return(
-        <div className='pricingCard'>
-<div className='py-2 bootomBarContainer'>
-  <h2 className='textColor'>{CardTitLe}</h2>
-  <h3 className='websitePrimaryColor'>{CardSubTitle}</h3>
-</div>
-<div className='row '>
- <span className='py-3 textColor'>{`Weight Training + Cardio`}</span>
- <span className='textColor'>{` ₹${monthlyPricing}`}</span>
+import React, { FC } from 'react';
+import { PricingCardProps } from './interface';
+import './PricingCard.css';
 
-</div>
-<div className='row py-4'>
- <span className='py-2 secondaryText'>{`Monthly + Cardio + Personal Trainer`}</span>
- <span className='py-2 secondaryText'>{` ₹${monthlyPricing+ptPricing}`}</span>
+const PricingCard: FC<PricingCardProps> = ({ CardTitLe, CardSubTitle, monthlyPricing, ptPricing, ImageUrl,forFees }) => {
+    return (
+        <div  className='pricing-block col-lg-4 col-md-6 col-sm-12'>
+            <div 
+            data-aos="fade-up"
+                className='inner-box'
+                style={{
+                    backgroundImage: `url(${ImageUrl})`,
+                    backgroundRepeat: 'no-repeat',
+                    backgroundSize: 'cover',
+                    height:'100vh'
+                }}
+            >
+                {/* Background Overlay */}
+              
+                {/* <div className='content'> */}
+                    <h4 className='mainTitle fontyyy text-gap'>{CardTitLe}</h4>
+                    <div className='title nmnmn text-gap'>{CardSubTitle}</div>
+                    <div className='price'>
+                        <h6 className='textdd fonnn'>{`For ${forFees}`}</h6>
+                        <span className='PriceText text-gap'>{`₹${monthlyPricing}`}</span>
+                    </div>
+                    <div className='PriceFeatures'>
+                        <ul className='PriceFeature1'>
+                            <li style={{ display: 'flex', marginTop: '15px' ,color:'white',alignItems:'center'}}>
+                                <img
+                                    src={'https://cdn-icons-png.flaticon.com/128/16115/16115554.png'}
+                                    alt='Tick Icon'
+                                    className='tickImageIcon'
+                                />
+                                Weight training
+                            </li>
+                            <li style={{ display: 'flex', marginTop: '15px' ,color:'white',alignItems:'center'}}>
+                                <img
+                                    src={'https://cdn-icons-png.flaticon.com/128/16115/16115554.png'}
+                                    alt='Tick Icon'
+                                    className='tickImageIcon'
+                                />
+                                Cardio
+                            </li>
+                            <li style={{ display: 'flex',color:'white', marginTop: '15px' ,alignItems:'center'}}>
+                                <img
+                                    src={'https://cdn-icons-png.flaticon.com/128/16115/16115554.png'}
+                                    alt='Tick Icon'
+                                    className='tickImageIcon'
+                                />
+                                Personal training
+                            </li>
+                            <li style={{ display: 'flex',color:'white', marginTop: '15px' ,alignItems:'center'}}>
+                                <img
+                                    src={'https://cdn-icons-png.flaticon.com/128/16115/16115554.png'}
+                                    alt='Tick Icon'
+                                    className='tickImageIcon'
+                                />
+                                Diet Plan
+                            </li>
+                        </ul>
+                    </div>
+                    <div className='buttonParentcontainer'>
+                      
+                        <button
+                        className="btn btn-outline-light my-2 my-sm-0 px-4 py-3  d-md-block position-absolute kjkjkj text-gap"
+                        type="submit"
+                    >
+                    Select Slot
+                    </button>
+                        
+                   
+                    </div>
+                  
+                {/* </div> */}
+                </div>
 
-</div>
-<div className='py-3'>
-<button className="btn btn-danger my-2 my-sm-0 px-4 py-3 " type="submit">JOIN US</button>
+                {/* Text and Content */}
+               
+          
+        </div>
+    );
+};
 
-</div>
-
-</div>
-    )
-}
-
-export {PricingCard}
+export { PricingCard };

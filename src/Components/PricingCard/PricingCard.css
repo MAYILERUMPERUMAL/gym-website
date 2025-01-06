@@ -1,26 +1,159 @@
-.pricingCard{
-    width: 100%;
-    max-width: 380px;
-    border: 3px solid black;
-    background: rgb(26, 26, 26);
-    text-align: center;
-    transition: 0.8s;
+.pricing-block {
+    position: relative;
+    margin: 0;
+    width: auto;
+    margin-bottom: 10px;
+    margin-left: 10;
+    margin-right: 10;
+    background-color:white;
+    height: 100vh;
+   /* align-content: center; */
+}
+.fonnn{
+    font-size: 20px;
+}
+.pricing-block .inner-box {
+    position: relative;
+padding:40px;
+    /* height: 100vh; */
+  
+    background-color: #fff;
+    overflow: hidden; /* Ensure zoomed image doesn't overflow */
+    transition: transform 0.3s ease, background-size 0.3s ease;
+}
+.nmnmn{
+    color: white ;
+    text-align: start;
+    position: relative;
+    font-size: 18px;
+    padding-bottom: 10px;
+    font-weight:700;
+    font-family: 'Rubik';
+}
+.fontyyy{
+    font-size: 30px;
+    font-family: 'Rubik';
+    font-weight: 700;
+
+}
+.mainTitle{
+    text-align: start;
+    position: relative;
+    color: #fff;
+
 }
 
-.pricingCard:hover{
-    border-color: red;
-    border-width: 3px;
-    border-style: solid;
+.kjkjkj{
+    justify-self:flex-start;
+    font-size: 18px;
+    font-weight: 500;
 }
-.bootomBarContainer{
-    border-bottom: 1px solid rgb(49, 49, 49);
+.text-gap {
+    letter-spacing: 1.5px; /* Adjust the value as needed */
 }
-.textColor{
-    color:white
+.buttonParentcontainer{
+align-items: flex-start;
+margin-top: 20px;
+    /* padding:20px; */
+    /* background-color: aqua; */
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
-.websitePrimaryColor{
-    color:  red
+.mainTitle:hover:before{
+    color: black !important;
 }
-.secondaryText{
-    color:rgb(122, 131, 139);
+.pricing-block .inner-box:before {
+    position: absolute;
+    content: '';
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    -webkit-transition: all 500ms ease;
+    background-color: rgba(34, 34, 34, 0.85);
+
+    /* transition: all 500ms ease; */
+    
+}
+ .inner-box:hover{  
+    /* background-color: #fff;   */
+    transform: scale(1.02); /* Slightly zoom the box */
+    background-size: 110%;
+}
+
+.inner-overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    /* inset: 0; */
+    /* Apply overlay color */
+   
+}
+.inner-overlay:hover{
+    background-color: #fff;
+    transition: all 0.2s ease;
+}
+.content {
+    position: relative;
+    z-index: 2; /* Position content above the overlay */
+    color: #fff; /* Ensure text color remains clear */
+}
+.content.inner-overlay:hover{
+    color:black;
+    background-color: #fff;
+    transition: all 0.2s ease;  
+}
+.PriceFeatures{
+    /* background-color: aqua; */
+    display: flex;
+align-content: flex-start;
+position: relative;
+
+}
+.PriceFeature1{
+    /* background-color: aquamarine; */
+    position: relative;
+    font-size: 22px;
+    font-weight: 600;
+    padding: 0;
+    margin: 0;
+   padding-bottom: 10px;
+   padding-top: 10px;
+}
+.pricing-block .inner-box .title .textCommonColor {
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    line-height: 1.3em;
+    font-size: 16px;
+    margin-top: 15px;
+    transition: all 500ms ease;
+    
+    text-align: start;
+}
+
+.price {
+    font-size: 16px;
+    margin-top: 20px;
+   text-align: start;
+}
+
+.PriceText {
+    font-size: 40px;
+    font-weight: 700;
+    color: red;
+    position: relative;
+}
+.textdd{
+    position: relative;
+    color: #fff;
+}
+.tickImageIcon {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+    filter: brightness(0) invert(1);
+}
+.textCommonColor{
+    color: black;
 }

@@ -7,13 +7,21 @@ import 'aos/dist/aos.css';
 import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
+import { Navigation, Pagination, Scrollbar, A11y ,Autoplay, EffectCreative} from 'swiper/modules';
+import { Swiper, SwiperSlide,useSwiper } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
+import '@fontsource/rubik'
+import { icons } from '../../../Assest';
 const HomeScreen:FC<HomeProps>=()=>{
   const [drawerOpen, setDrawerOpen] = useState(false);
 
   const toggleDrawer = () => {
     setDrawerOpen(!drawerOpen);
   };
-
+  const swiper = useSwiper();
   useEffect(() => {
     AOS.init({
         duration: 1200, // Animation duration (in milliseconds)
@@ -23,22 +31,50 @@ const HomeScreen:FC<HomeProps>=()=>{
     });
 }, []);
 const options = {
-  autoplay: false, // Enable autoplay
-  autoplayTimeout: 3000, // Set autoplay interval to 1 second (1000ms)
-  autoplayHoverPause: false, // Prevent pausing on hover
-  nav: false, // Hide navigation arrows
-  dots: false, // Hide pagination dots
-  animateOut: 'fadeOut', // Fade-out animation for transitions
-  items: 1, // Show one item at a time
-  loop: true, // Enable infinite looping
+  loop: true,
+  items: 1,
+  nav: true,
+  dots: false,
+  autoplay: true,
+  autoplayTimeout: 8000,
+  smartSpeed: 800,
+  animateOut: 'fadeOut',
+  navText: [
+    "<span class='carousel-nav-arrow'>&#8249;</span>", // Custom left arrow
+    "<span class='carousel-nav-arrow'>&#8250;</span>", // Custom right arrow
+  ],
 };
-const slides = [
-  { id: 1, image: 'https://images.alphacoders.com/108/thumb-1920-1080977.jpg' },
-  { id: 2, image: 'https://wallpapercave.com/wp/wp13300652.jpg' },
+const images = [
+  {
+    id: 1,
+    src: "https://images.unsplash.com/photo-1605296867304-46d5465a13f1?auto=format&fit=crop&w=1920",
+    alt: "Image 1",
+  },
+  {
+    id: 2,
+    src: "https://speede.fit/cdn/shop/articles/what-muscles-do-deadlifts-work.jpg?v=1663081017",
+    alt: "Image 2",
+  }
 ];
- 
+let image1=[
+  {id:1,imagesrc:'https://www.shutterstock.com/image-photo/muscular-man-workout-gym-strong-260nw-1469996258.jpg'},
+  {id:2,imagesrc:'https://plus.unsplash.com/premium_photo-1664476919710-8b42c2c4198e?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8bXVzY2xlJTIwbWFufGVufDB8fDB8fHww'},
+  {id:3,imagesrc:'https://static.independent.co.uk/s3fs-public/thumbnails/image/2017/05/24/10/istock-478624695.jpg'}
+
+
+]
+const [hoveredIndex, setHoveredIndex] = useState(null);
+
+const handleMouseEnter = (index:any) => {
+  setHoveredIndex(index);
+};
+
+const handleMouseLeave = () => {
+  setHoveredIndex(null);
+};
     return(
-<div className='appConatiner'>
+<div className='appConatiner' onScroll={()=>{console.log('ljkhjkhkjhkjh');
+}}>
     
 <nav className="navbar navbar-light   NavBarStyle">
                 <a className="navbar-brand">
@@ -49,43 +85,53 @@ const slides = [
                     />
                 </a>
                 <div className="container d-flex ListStyle col-6">
-                    <a className="ListTag d-none d-md-block">HOME</a>
-                    <a className="ListTag d-none d-md-block">ABOUT</a>
-                    <a className="ListTag d-none d-md-block">PRICING</a>
-                    <a className="ListTag d-none d-md-block">GALLERY</a>
-                    <a className="ListTag d-none d-md-block">SUBSCRIBE</a>
+                    <a className="ListTag d-none d-md-block text-gap" onClick={()=> swiper.slideNext()}>Home</a>
+                    <a className="ListTag d-none d-md-block text-gap">About</a>
+                    <a className="ListTag d-none d-md-block text-gap">Pricing</a>
+                    <a className="ListTag d-none d-md-block text-gap">Gallery</a>
+                    <a className="ListTag d-none d-md-block text-gap">Subscribe</a>
                 </div>
                 <form className="form-inline">
                     <button
-                        className="btn btn-outline-danger my-2 my-sm-0 px-5 py-3 d-none d-md-block"
+                        className="btn btn-outline-light my-2 my-sm-0 px-5 py-3 d-none d-md-block text-gap"
                         type="submit"
                     >
-                        JOIN US
+                        Join Us
                     </button>
                 </form>
 
                 {/* Toggle Button */}
-                <button className="navbar-toggler" type="button" onClick={toggleDrawer}>
-                    <span className="navbar-toggler-icon"></span>
+                <button className="navbar-toggler  coomonVcc" type="button" onClick={toggleDrawer}>
+                    <span className="navbar-toggler-icon  coomonVcc"></span>
                 </button>
 
                 {/* Drawer */}
                 <div className={`side-drawer ${drawerOpen ? 'open' : ''}`}>
                     <div className="Overlay">
-                        <ul className="navbar-nav">
+                        <ul className="navbar-nav navBarContainer">
                             <li className="nav-item">
-                                <a className="nav-link text-white" href="#">
-                                    HOME
+                                <a className="nav-link text-white navTextStyle" href="#">
+                                    Home
                                 </a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link text-white" href="#">
-                                    ACCOUNTS
+                                <a className="nav-link text-white navTextStyle text-gap" href="#">
+                                    About
                                 </a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link text-white" href="#">
-                                    ABOUT
+                                <a className="nav-link text-white navTextStyle text-gap" href="#">
+                                    Pricing
+                                </a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link text-white navTextStyle text-gap" href="#">
+                                    Gallery
+                                </a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link text-white navTextStyle text-gap" href="#">
+                                    Subscribe
                                 </a>
                             </li>
                         </ul>
@@ -96,31 +142,39 @@ const slides = [
                 {drawerOpen && <div className="backdrop" onClick={toggleDrawer}></div>}
             </nav>
 
-            <OwlCarousel className="owl-theme" {...options}>
-                {slides.map((slide) => (
-                    <div
-                        key={slide.id}
-                        className="item"
-                        style={{
-                            backgroundImage: `url(${slide.image})`,
-                            margin:0
-                          
-                        }}
-                    >
-                        <div className="Overlay1">
-<div className='container'>
+            <OwlCarousel  className="owl-theme ssss" {...options}>
+{images.map((slide) => (
+                <div
+                    key={slide.id}
+                    className="item"
+                    style={{ backgroundImage: `url(${slide.src})` }}
+                >
+                  <div className='container  ggg'>
   <div className='row'>
-    <div className='col-lg-6 '>
+    <div className='col-8'>
+      
     <div className='HomeContent1'>
-    <label className='textContentcolor'>---WELCOME TO WEIDER GYM</label>
-<h1 className='textColor textSixe'>READY TO TRAIN</h1>
-<h1 className='textColor textSixe'>YOUR BODY</h1>
-<button
-                        className="btn btn-outline-danger my-2 my-sm-0 px-5 py-3 d-none d-md-block"
+      <div className='conyerfff'>
+
+    
+      <h1  className='fontFamily animated-title text-gap marginLeft'>Elevated Your<br/>Workout</h1>
+
+      <p  className='fontColro animated-text text-gap paragraphtextSize marginLeft text-line-height'>Your body achieves what your mind believes. Push harder,<br/>aim higher and let determination be your fuel</p>
+
+    {/* <label data-aos="fade-up" className='textContentcolor '>---WELCOME TO WEIDER GYM</label>
+<h1 data-aos="fade-up" className='textColor textSixe  fontWeight'>READY TO TRAIN</h1>
+<h1 data-aos="fade-up" className='textColor textSixe  fontWeight'>YOUR BODY</h1> */}
+<div className='secondaryButton'>
+<button 
+                        className="btn btn-outline-light my-2 my-sm-0 px-4 py-3   animated-text text-gap marginLeft text-gap"
                         type="submit"
+                      
                     >
-                        JOIN US
+                    Get Started
                     </button>
+</div>
+
+                    </div>
     </div>
     </div>
     {/* <div className='col-6 '>
@@ -143,15 +197,31 @@ const slides = [
   </div>
 
 </div>
-                        
-                        </div>
-                    </div>
-                ))}
-            </OwlCarousel>
-<div className='Section2 container-fluid p-5 contColor'>
+                </div>
+            ))}
+</OwlCarousel>
+         <div className='  d-flex secondaryContent'>
+          <div className=''>
+            <h4 className='fontColro defaultFontFamily fontSize text-gap'>5+</h4>
+            <p className='fontColro paragraphFont defaultFontFamily text-gap'>Year of services</p>
+          </div>
+          <div>
+            <h4 className='fontColro defaultFontFamily fontSize text-gap'>10+</h4>
+            <p className='fontColro paragraphFont defaultFontFamily text-gap'>Certificate trainers</p>
+          </div>
+          <div>
+            <h4 className='fontColro defaultFontFamily fontSize text-gap'>586+</h4>
+            <p className='fontColro paragraphFont defaultFontFamily text-gap'>Happy members</p>
+          </div>
+          <div>
+            <h4 className='fontColro defaultFontFamily fontSize text-gap'>95%</h4>
+            <p className='fontColro paragraphFont defaultFontFamily text-gap'>Customer satisfaction</p>
+          </div>
+         </div>
+{/* <div className='Section2 container-fluid p-5 contColor'>
 <div className='row gx-5'>
 <div className='col-lg-5 mb-5 mb-lg-0'>
-<div className='position-relative h-100' style={{minHeight:'500px'}}>
+<div data-aos="flip-left" className='position-relative h-100' style={{minHeight:'500px'}}>
 <img src={'https://c4.wallpaperflare.com/wallpaper/440/786/339/hood-muscle-muscle-muscles-wallpaper-preview.jpg'} 
 className=' w-100 h-100 rounded'
 style={{objectFit:'cover'}}
@@ -159,8 +229,8 @@ style={{objectFit:'cover'}}
 </div>
 </div>
 <div className='col-lg-7 aboutContent1'>
-<div className='AboutContainer'>
-  <h5 className='text-start textContentcolor'>About Us</h5>
+<div  className='AboutContainer'>
+  <h5 className='text-start textContentcolor' >ABOUT US</h5>
   <h2 className='text-start textColor kjhkhk'>WELCOME TO WEIDER</h2>
   <h5 className='text-start marginBottom TextLineHeight textColor lllll'>At Weider, we focus on building champions by offering tailored programs for bodybuilding competitions, weight gain, weight loss, and overall fitness.</h5>
   <p className='text-start marginBottom TextLineHeight contentParagraph'>Weider is equipped with cutting-edge facilities, guided by experienced trainers and supportive staff, including lady trainers for women. Whether your aim is to sculpt your physique, boost your strength, or improve your health, Weider provides the tools, expertise, and community to help you succeed.</p>
@@ -168,7 +238,7 @@ style={{objectFit:'cover'}}
     <div className='row mx-4'>
       <div className='col-6'>
         <div className=' chooseToggle' >
-        <a>ABOUT US</a>
+        <label className='textColor'>ABOUT US</label>
 
         </div>
 
@@ -188,36 +258,47 @@ At Weider, we are dedicated to creating champions and transforming lives. Our gy
 </div>
 </div>
 </div>
-</div>
-<div className="container-fluid contentContainer overflow-hidden">
-  <div className="row">
-    <div className="col-12 bg-secondary p-0 overflow-hidden col-md-6">
-  <div className='containerImageStyle1'>
-<div className='containerImageStyle1child'>
-  <h1 className='text-white'>For Women</h1>
-  <p className='paragraph'>"Empower your fitness journey with tailored workouts designed to enhance strength, flexibility, and confidence for women.</p>
-  <button className="btn btn-danger my-2 my-sm-0 px-5 py-3 " type="submit">JOIN US</button>
-
-</div>
+</div> */}
+<div className="container-fluid nhnnn">
+<div className='featursStyle px-3 mx-2 opp'>
+    <h1 data-aos="fade-up" className='text-white defaultFontFamily fontWefff text-gap'>Our Pricing</h1>
+    <p data-aos="fade-up" className=' paragraphText defaultFontFamily text-white text-gap'>Achieve your fitness goals with flexible membership plans tailored to suit your needs and budget.</p>
   </div>
+  <div className="row njm">
+    <div className="col-lg-4 col-md-6 col-sm-12 mb-4">
+      <PricingCard
+        CardTitLe={"Monthly Plan"}
+        CardSubTitle="Here goes Some Description"
+        monthlyPricing={1000}
+        ptPricing={5000}
+        forFees={'1 Month'}
+        ImageUrl="https://expert-themes.com/html/gym/images/resource/price-1.jpg"
+      />
     </div>
-   
-    <div className="col-12 bg-danger p-0 overflow-hidden col-md-6">
-   <div className='containerImageStyle2'>
-   <div className='containerImageStyle1child'>
-  <h1 className='text-white'>For Guys</h1>
-  <p className='paragraph'>Elevate your strength, endurance, and physique with specialized training programs designed exclusively for men.</p>
-  <button className="btn btn-danger my-2 my-sm-0 px-5 py-3 " type="submit">JOIN US</button>
-
-
-</div>
-   </div>
-  
+    <div className="col-lg-4 col-md-6 col-sm-12 mb-4">
+      <PricingCard
+        CardTitLe={"Quarterly Plan"}
+        CardSubTitle="Here goes Some Description"
+        monthlyPricing={3500}
+        ptPricing={5000}
+        forFees={'6 Month'}
+        ImageUrl="https://expert-themes.com/html/gym/images/resource/price-2.jpg"
+      />
+    </div>
+    <div className="col-lg-4 col-md-6 col-sm-12 mb-4">
+      <PricingCard
+        CardTitLe={"Yearly Plan"}
+        CardSubTitle="Here goes Some Description"
+        monthlyPricing={10000}
+        forFees={'1 Year'}
+        ptPricing={5000}
+        ImageUrl="https://expert-themes.com/html/gym/images/resource/price-3.jpg"
+      />
     </div>
   </div>
- 
 </div>
-<div className='featureSection'>
+
+{/* <div className='featureSection'>
   <div className='featurePadding'>
   <div className='featursStyle px-3 mx-2'>
     <h1 className='text-white'>OUR FEATURES</h1>
@@ -266,230 +347,122 @@ At Weider, we are dedicated to creating champions and transforming lives. Our gy
 </div>
   </div>
  
-</div>
-<div className='offerSection container-fluid  '>
-  <div className='row '>
-    
-  <div className='col-0  col-md-7 overLayContent'>
-  <div>
-  <h1 className='offerSectionText'>A BIG OFFER FOR<br/>THIS SUMMER</h1>
+</div> */}
 
+<div className='AboutSection container-fluid'>
+<div className='featursStyle px-3 mx-2 opp'>
+    <h1 data-aos="fade-up" className='text-white defaultFontFamily fontWefff text-gap'>Why Choose Us</h1>
+    <p data-aos="fade-up" className=' paragraphText defaultFontFamily text-white text-gap'>Achieve your fitness goals with flexible membership plans tailored to suit your needs and budget.</p>
   </div>
-  <div>
-    <h2 className='offerSectionText1'>50% Off</h2>
-  </div>
-  <div>
-  <p className='text-white paragraphText'>There are many variations of passages of lorem Ipsum available, but the majority have suffered alteration.</p>
-
-  </div>
-  <div>
-  <button className="btn btn-danger my-2 my-sm-0 px-5 py-3 " type="submit">JOIN US</button>
-
-  </div>
-</div>
-<div className='col-12  col-md-5'>
-  
-</div>
-  </div>
-
-</div>
-<div className='featureSection'>
-  <div className='featurePadding'>
-  <div className='featursStyle px-3 mx-2'>
-    <h1 className='text-white'>OUR PRICING</h1>
-    <p className='text-white paragraphText'>Achieve your fitness goals with flexible membership plans tailored to suit your needs and budget.</p>
-  </div>
-<div className='container-fluid'>
-  <div className='row '>
-<div className='col-md-4 col-12 d-flex justify-content-center my-2'>
-<PricingCard CardTitLe={'Montly'} CardSubTitle={'Subscription'} monthlyPricing={1000} ptPricing={5000}/>
-</div>
-<div className='col-md-4 col-12 d-flex justify-content-center my-2'>
-<PricingCard CardTitLe={'Quaterly'} CardSubTitle={'Subscription'} monthlyPricing={3500} ptPricing={5000}/>
-</div>
-<div className='col-md-4 col-12 d-flex justify-content-center my-2'>
-<PricingCard CardTitLe={'Yearly'} CardSubTitle={'Subscription'} monthlyPricing={10000} ptPricing={5000}/>
-</div>
-  </div>
-</div>
-  </div>
+<div className='row hhhhhvcmm'>
+<div data-aos="fade-up" className='col-7 '>
  
+<div >
+  <div  className='chooseContainer'>
+  <div  className='small-container'>
+    <div className='small-container-imagecontainer'>
+    <div className="small-container-image-radius">
+  <img
+    src="https://cdn-icons-png.flaticon.com/128/3043/3043888.png"
+    alt="Rounded Icon"
+    className="small-container-image"
+  />
 </div>
-<div className='container-fluid trainerSection'>
-  <div className=''>
-    <h1 className='trainerTextCol'>OUR TRAINER'S</h1>
-    <p className='paragraph'>Meet our expert trainers, dedicated to guiding you every step of the way on your fitness journey.</p>
+      <div>
+    <h5 className='small-container-title'>Weight training</h5>
 
+  <p className='small-container-parent-text'>Achieve your fitness goals with flexible membership plans tailored to suit</p>
+
+      </div>
+
+    </div>
+</div>
+<div  className='small-container'>
+    <div className='small-container-imagecontainer'>
+    <div className="small-container-image-radius">
+  <img
+    src="https://cdn-icons-png.flaticon.com/128/3043/3043888.png"
+    alt="Rounded Icon"
+    className="small-container-image"
+  />
+</div>
+
+      <div>
+    <h5 className='small-container-title'>Functional Training</h5>
+
+  <p className='small-container-parent-text'>Achieve your fitness goals with flexible membership plans tailored to suit</p>
+
+      </div>
+
+    </div>
+</div>
   </div>
-<div className='row mx-4 mt-5'>
-<div className='col-md-4 col-12  '>
-<TrainerCard/>
+  <div  className='chooseContainer'>
+  <div  className='small-container'>
+    <div className='small-container-imagecontainer'>
+    <div className="small-container-image-radius">
+  <img
+    src="https://cdn-icons-png.flaticon.com/128/3043/3043888.png"
+    alt="Rounded Icon"
+    className="small-container-image"
+  />
+</div>
+      <div>
+    <h5 className='small-container-title'>Cardio Training</h5>
+
+  <p className='small-container-parent-text'>Achieve your fitness goals with flexible membership plans tailored to suit</p>
+
+      </div>
+
+    </div>
+</div>
+<div  className='small-container'>
+    <div className='small-container-imagecontainer'>
+    <div className="small-container-image-radius">
+  <img
+    src="https://cdn-icons-png.flaticon.com/128/3043/3043888.png"
+    alt="Rounded Icon"
+    className="small-container-image"
+  />
+</div>
+      <div>
+    <h5 className='small-container-title'>Zumba Classes</h5>
+
+  <p className='small-container-parent-text'>Achieve your fitness goals with flexible membership plans tailored to suit</p>
+
+      </div>
+
+    </div>
+</div>
+  </div>
+</div>
+</div>
+<div data-aos="fade-up" className='col-5  chooseParntImage'>
+<div className='choose-image1-parent'>
+  <img  src={'https://img.freepik.com/premium-photo/bearded-athletic-looking-bodybulder-work-out-with-battle-rope-dark-with-smoke-strength-motivation_136403-10333.jpg'} className='choose-image1'/>
+  <img src={'https://images.unsplash.com/photo-1540497077202-7c8a3999166f?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z3ltJTIwZXF1aXBtZW50fGVufDB8fDB8fHww'} className='choose-image1'/>
+
+</div>
+<div className=''>
+  <img  src={'https://img.freepik.com/premium-photo/modern-gym-setting-with-neatly-arranged-dumbbells-fitness-equipmen_1102161-22916.jpg'} className='choose-image2'/>
+</div>
+</div>
+</div>
+</div>
+<div className='section4 py-5'>
+<h1 data-aos="fade-up"className='text-white defaultFontFamily fontWefff text-gap'>Meet Our Trainers</h1>
+<p data-aos="fade-up" className=' paragraphText defaultFontFamily text-white text-gap'>Achieve your fitness goals with flexible membership <br/>plans tailored to suit your needs and budget.</p>
+<div className='section-images py-5'>
+<div className='col-md-4 col-12 '>
+<TrainerCard  image={icons.image1} trainerName={'John Doe'}/>
 </div>
 <div className='col-md-4 col-12'>
-<TrainerCard/>
-{/* <div className='trainerImage2 mx-5'>
-<div className='Social'>
-<div  className='d-flex  justify-content-center'>
-  <div className='roundedDiv'><img src={'https://cdn-icons-png.flaticon.com/128/20/20837.png'} className='SocialIconFaceboo' /></div>
-  <div className='roundedDiv'><img src={'https://cdn-icons-png.flaticon.com/128/5968/5968958.png'} className='SocialIconFaceboo' /></div>
-
-  <div className='roundedDiv'><img src={'https://cdn-icons-png.flaticon.com/128/717/717392.png'} className='SocialIconFaceboo' /></div>
-
-</div>
-</div>
-</div> */}
-{/* <img  className='trainerImage' src='https://t3.ftcdn.net/jpg/06/45/17/94/360_F_645179444_EtQDcQw5Mcyv1MSH25K5FrEkb3LfH5Vk.jpg'/> */}
-
-
+<TrainerCard image={icons.image2} trainerName={'James Taylor'}/>
 </div>
 <div className='col-md-4 col-12'>
-<TrainerCard/>
-{/* <div className='trainerImage3 mx-5'>
-<div className='Social'>
-<div  className='d-flex  justify-content-center'>
-  <div className='roundedDiv'><img src={'https://cdn-icons-png.flaticon.com/128/20/20837.png'} className='SocialIconFaceboo' /></div>
-  <div className='roundedDiv'><img src={'https://cdn-icons-png.flaticon.com/128/5968/5968958.png'} className='SocialIconFaceboo' /></div>
-
-  <div className='roundedDiv'><img src={'https://cdn-icons-png.flaticon.com/128/717/717392.png'} className='SocialIconFaceboo' /></div>
-
-</div>
-</div>
-</div> */}
-{/* <img  className='trainerImage' src={'https://img.freepik.com/free-photo/portrait-handsome-man_23-2150770957.jpg'}/> */}
-
-
-</div>
-</div>
-</div>
-<div className='container-fluid TrainingSesion'>
-<div className="row row-cols-2">
-    <div className=" col-md-6 imageBackground1 ">
-    <div className='TrainerSectionImagePositionView'>
-
-      <div className='TrainerSectionTextView '>
-
-      <h2 className='trainerTextCol'>Functional Training</h2>
-<p  className='TrainingsectionSubText'>Functional training focuses on improving strength, balance, Train smarter to build a resilient</p>
-<button className="btn btn-danger my-2 my-sm-0 px-4 py-3 " type="submit">Find More</button>
-
-      
-      </div>
-      </div>
-    </div>
-    <div className="col-12 col-md-6 imageBackground2">
-    <div className='TrainerSectionImagePositionView'>
-
-      <div className='TrainerSectionTextView '>
-
-      <h2 className='trainerTextCol'>Functional Training</h2>
-<p  className='TrainingsectionSubText'>Functional training focuses on improving strength, balance, Train smarter to build a resilient</p>
-<button className="btn btn-danger my-2 my-sm-0 px-4 py-3 " type="submit">Find More</button>
-
-      
-      </div>
-      </div>
-    </div>
-    <div className="col-12 col-md-6 imageBackground3">
-    <div className='TrainerSectionImagePositionView'>
-
-<div className='TrainerSectionTextView '>
-
-<h2 className='trainerTextCol'>Functional Training</h2>
-<p  className='TrainingsectionSubText'>Functional training focuses on improving strength, balance, Train smarter to build a resilient</p>
-<button className="btn btn-danger my-2 my-sm-0 px-4 py-3 " type="submit">Find More</button>
-
-
-</div>
+<TrainerCard image={icons.image3} trainerName={'Adam Phillips'}/> 
 </div>
 
-    </div>
-    <div className="col-12 col-md-6 imageBackground4">
-    <div className='TrainerSectionImagePositionView'>
-
-<div className='TrainerSectionTextView '>
-
-<h2 className='trainerTextCol'>Functional Training</h2>
-<p  className='TrainingsectionSubText'>Functional training focuses on improving strength, balance, Train smarter to build a resilient</p>
-<button className="btn btn-danger my-2 my-sm-0 px-4 py-3 " type="submit">Find More</button>
-
-
-</div>
-</div>
-
-    </div>
-  </div>
-
-</div>
-<div className='ContactSection container-fluid'>
-<div className='ContactSection1 row'>
-<div className='inputContainer'>
-  <h1 className='TextEnq'>Enquiry</h1>
- <TextInput value={''} placeholder={'Name'} onChangeText={()=>{}} isMultiline={false}/>
- <TextInput value={''} placeholder={'Email'} onChangeText={()=>{}} isMultiline={false}/>
-
- <TextInput value={''} placeholder={'Conatct'} onChangeText={()=>{}} isMultiline={false}/>
- <TextInput value={''} placeholder={'Description'} onChangeText={()=>{}} isMultiline={true}/>
- <button className="btn btn-danger my-1 my-sm-0 px-3 py-2 buttonWidth" type="submit">Enquiry</button>
-
-
-</div>
-{/* <div className='bg-primary'>ijiji</div> */}
-
-</div>
-</div>
-<div className='ConatctBranch container-fluid'>
-<div className='row'>
-  <div className='col-12 col-md-3 Contactheight'>
-<div className='Conatactus1'>
-<img src={'https://www.logotypes101.com/logos/39/CF43103376FEE2C7523450410536A5EF/weider.png'} className='ConatctImg'/>
-<div className='px-3'>
-<p>Weider is one of the best fitness centers in Chennai. Our customized designs will help to enjoy the best experience of your life.</p>
-
-</div>
-<h4>Follow us</h4>
-<div>
-  <img src={'https://cdn-icons-png.flaticon.com/128/2111/2111463.png'} className='contactPng1'/>
-  <img className='contactPng1' src={'https://cdn-icons-png.flaticon.com/128/15047/15047435.png'}/>
-</div>
-</div>
-  </div>
-  <div className='col-12 col-md-3'>
-<div className='contactSub1'>
-  <div className='ConatactSubHead'>
-  <h5 className='contactTextStyle'>Quick links</h5>
-
-  </div>
-<ul className='UnderList1'>
-  <li className='BulletList'>Home</li>
-  <li>About Us</li>
-  <li>Pricing</li>
-  <li>Gallery</li>
-  <li>Subscribe</li>
-
-</ul>
-</div>
-</div>
-<div className='col-12 col-md-3 '>
-<div className='contactSub1'>
-  <div className='ConatactSubHead'>
-  <h5 className='contactTextStyle'>For More Info</h5>
-
-  </div>
-<ul className='UnderList2'>
-  <li className='BulletList1'>Home</li>
-  <li className='BulletList1'>Mr Praveen kumar</li>
-  <li className='BulletList1'>P:91+ 9876543210</li>
-  <li className='BulletList1'>E:Praveen@gmail.com</li>
-  {/* <li></li> */}
-
-</ul>
-</div>
-</div>
-<div className='col-12 col-md-3 align-content-center'>
-<div className='ImageCont'>
-
-</div>
-</div>
 
 </div>
 </div>
