@@ -4,7 +4,7 @@ import './PricingCard.css';
 
 const PricingCard: FC<PricingCardProps> = ({ CardTitLe, CardSubTitle, monthlyPricing, ptPricing, ImageUrl,forFees }) => {
     return (
-        <div  className='pricing-block col-lg-4 col-md-6 col-sm-12'>
+        <div  className='pricing-block'>
             <div 
             data-aos="fade-up"
                 className='inner-box'
@@ -12,7 +12,7 @@ const PricingCard: FC<PricingCardProps> = ({ CardTitLe, CardSubTitle, monthlyPri
                     backgroundImage: `url(${ImageUrl})`,
                     backgroundRepeat: 'no-repeat',
                     backgroundSize: 'cover',
-                    height:'100vh'
+                    height:'100%'
                 }}
             >
                 {/* Background Overlay */}
@@ -60,7 +60,7 @@ const PricingCard: FC<PricingCardProps> = ({ CardTitLe, CardSubTitle, monthlyPri
                             </li>
                         </ul>
                     </div>
-                    <div className='buttonParentcontainer'>
+                    <div className='buttonParentcontainer bg-primary'>
                       
                         <button
                         className="btn btn-outline-light my-2 my-sm-0 px-4 py-3  d-md-block position-absolute kjkjkj text-gap"

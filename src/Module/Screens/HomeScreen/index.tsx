@@ -449,17 +449,17 @@ At Weider, we are dedicated to creating champions and transforming lives. Our gy
 </div>
 </div>
 </div>
-<div className='section4 py-5'>
+<div className='section4 py-5 container-fluid'>
 <h1 data-aos="fade-up"className='text-white defaultFontFamily fontWefff text-gap'>Meet Our Trainers</h1>
 <p data-aos="fade-up" className=' paragraphText defaultFontFamily text-white text-gap'>Achieve your fitness goals with flexible membership <br/>plans tailored to suit your needs and budget.</p>
-<div className='section-images py-5'>
-<div className='col-md-4 col-12 '>
+<div className='row py-5'>
+<div className='col-lg-4 col-md-6 col-sm-12 mb-4'>
 <TrainerCard  image={icons.image1} trainerName={'John Doe'}/>
 </div>
-<div className='col-md-4 col-12'>
+<div className='col-lg-4 col-md-6 col-sm-12 mb-4'>
 <TrainerCard image={icons.image2} trainerName={'James Taylor'}/>
 </div>
-<div className='col-md-4 col-12'>
+<div className='col-lg-4 col-md-6 col-sm-12 mb-4'>
 <TrainerCard image={icons.image3} trainerName={'Adam Phillips'}/> 
 </div>
 

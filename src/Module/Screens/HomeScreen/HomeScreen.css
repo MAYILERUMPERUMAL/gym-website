@@ -656,7 +656,7 @@ font-weight:600;
     /* padding-bottom: 300px; */
 }
 .section4{
-    height: 100vh;
+    /* height: 100vh; */
     background-color: #fff;
 }
 .image-container {
@@ -682,7 +682,7 @@ font-weight:600;
     transition: transform 1.5s ease-in-out;
   }
   .section-images{
-    display: flex;
+    /* display: flex; */
     flex-direction: row;
   }
 .featurefonts{
