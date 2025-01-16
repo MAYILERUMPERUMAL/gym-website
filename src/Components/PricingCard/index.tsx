@@ -4,7 +4,7 @@ import './PricingCard.css';
 
 const PricingCard: FC<PricingCardProps> = ({ CardTitLe, CardSubTitle, monthlyPricing, ptPricing, ImageUrl,forFees }) => {
     return (
-        <div  className='pricing-block'>
+        <div  className='pricing-block mx-3'>
             <div 
             data-aos="fade-up"
                 className='inner-box'
@@ -60,10 +60,10 @@ const PricingCard: FC<PricingCardProps> = ({ CardTitLe, CardSubTitle, monthlyPri
                             </li>
                         </ul>
                     </div>
-                    <div className='buttonParentcontainer bg-primary'>
+                    <div className='buttonParentcontainer  my-sm-0 px-0 py-1'>
                       
                         <button
-                        className="btn btn-outline-light my-2 my-sm-0 px-4 py-3  d-md-block position-absolute kjkjkj text-gap"
+                        className="btn btn-outline-light my-2 my-sm-0 px-4 py-3  d-md-block  kjkjkj text-gap"
                         type="submit"
                     >
                     Select Slot

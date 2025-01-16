@@ -131,6 +131,79 @@ h1.fontWefff{
     color:black !important;
     font-size: 50px;
 }
+h2.fonbbbb{
+    font-weight:bold !important;
+    color:black !important;
+    /* font-size: 50px; */
+}
+.klkiiiii{
+
+    background-color:#333846;
+}
+.klkjnnn{
+    display: flex;
+    flex-direction:column;
+}
+.smallButton{
+ font-size: 12px;
+ font-family: 'Rubik';
+}
+.ppllkk{
+display: flex;
+}
+.featuredd{
+    position: absolute;
+    top: -15px;
+    right: 0;
+    width: 70px;
+    height: 70px;
+    display: flex
+;
+    align-items: center;
+    justify-content: center;
+    font-size: 35px;
+    color: #fff;
+    background: #e31c25;
+}
+.nnbbb{
+    flex:1;
+    display: flex;
+}
+.dcdcdcdcd{
+    height:40%;
+    position: relative;
+    background-color: #dc3545;
+    display:flex ;
+    /* width: 0; */
+    margin: 0;
+    padding: 0;
+}
+.gfffcc{
+    position: absolute;
+ left:35%;
+ right: 20px;
+top: -10px;
+    background-color: #fff;
+    z-index: 999;
+    width: 35px;
+    height: 35px;
+}
+.bvbvbv{
+    height: 40%;
+    width: 40%;
+}
+.pkfggg{
+background-repeat: no-repeat;
+background-attachment: fixed;
+ /* background-color:black; */
+background-size:cover;
+/* background-position: calc(50% - -10px) center; */
+margin: 0px;
+height: 350px;
+/* width: 100%; */
+/* width: 100vw; */
+/* height: 100vh; */
+}
 .defaultFontFamily{
     font-family: 'Rubik';
 }
@@ -294,6 +367,7 @@ padding-right: 10px;
     color:#FFFFFF
 }
 
+
 .text-gap {
     letter-spacing: 1.5px; /* Adjust the value as needed */
 }
@@ -425,7 +499,9 @@ margin-top: 20%;
     color: white;
     box-sizing: border-box; /* Includes padding and borders in width */
 }
-
+.paragrafdd{
+    font-size: 14px;
+}
 .Container5{
     display: flex;
     /* background-color: #dc3545; */
@@ -717,10 +793,70 @@ background-color: #dc3545;
     background-color:white;
   
 }
+.opinionsection{
+    padding: 0;
+    margin: 0;
+}
+.klklkl{
+    margin: 0;
+    padding: 0;
+    /* background-color: #ce271d; */
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;
+}
+.poilll{
+    justify-self: flex-start;
+}
+.aboutImage{
+    height: 400px;
+    background-repeat: no-repeat;
+background-attachment: fixed;
+ /* background-color:black; */
+background-size: cover;
+}
+.kklklklbbb{
+    background-color:white;
+}
+.bvbvb{
+    height: 10%;
+    display: flex;
+align-content: center;
+align-items: center;
+    /* background-color: antiquewhite; */
+}
+.textsixzelinesepatt{
+    font-size: 10px;
+    margin-top: 12px;
+    margin-left: 5px;
+    font-family: 'Rubik';
+    font-weight: 600;
+    
+}
+.lineSeparator3{
+    height: 0.9%;
+    width: 15%;
+    background-color:black;
+  
+}
+.hhhhhhhbb{
+    text-align: start;
+}
+.jhjhj{
+    display: flex;
+    flex-direction: row;
+}
+.sideContetabout{
+align-content: flex-start;
+}
+.hughghg{
+    height: 300px;
+}
 .njm{
     padding-top: 50px;
-    margin-left: 35px;
-    margin-right: 35px;
+    margin-left: 15px;
+    margin-right: 15x;
+    /* background-color: #ce271d; */
 }
 .opp{
     padding-top: 50px;

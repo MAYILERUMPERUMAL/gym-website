@@ -15,6 +15,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import '@fontsource/rubik'
 import { icons } from '../../../Assest';
+import { LineText } from '../../../Components/LineText';
 const HomeScreen:FC<HomeProps>=()=>{
   const [drawerOpen, setDrawerOpen] = useState(false);
 
@@ -355,98 +356,22 @@ At Weider, we are dedicated to creating champions and transforming lives. Our gy
     <p data-aos="fade-up" className=' paragraphText defaultFontFamily text-white text-gap'>Achieve your fitness goals with flexible membership plans tailored to suit your needs and budget.</p>
   </div>
 <div className='row hhhhhvcmm'>
-<div data-aos="fade-up" className='col-7 '>
- 
-<div >
-  <div  className='chooseContainer'>
-  <div  className='small-container'>
-    <div className='small-container-imagecontainer'>
-    <div className="small-container-image-radius">
-  <img
-    src="https://cdn-icons-png.flaticon.com/128/3043/3043888.png"
-    alt="Rounded Icon"
-    className="small-container-image"
-  />
-</div>
-      <div>
-    <h5 className='small-container-title'>Weight training</h5>
+<div className='col-lg-6 bg-primary'>
+  <div className='ppllkk '>
+    <div className='dcdcdcdcd'>
 
-  <p className='small-container-parent-text'>Achieve your fitness goals with flexible membership plans tailored to suit</p>
-
-      </div>
+ <img src={'https://cdn-icons-png.flaticon.com/128/4744/4744822.png'} className='gfffcc'/>
+   
+    <img src={'https://t3.ftcdn.net/jpg/06/54/88/58/360_F_654885835_AjYViDaZKYEjpRWEDLZWrqg7MgN9GQur.jpg'} className='bvbvbv'/>
+ <div className='bg-secondary nnbbb'>
+    <h3>Video Instruction</h3>
 
     </div>
-</div>
-<div  className='small-container'>
-    <div className='small-container-imagecontainer'>
-    <div className="small-container-image-radius">
-  <img
-    src="https://cdn-icons-png.flaticon.com/128/3043/3043888.png"
-    alt="Rounded Icon"
-    className="small-container-image"
-  />
-</div>
-
-      <div>
-    <h5 className='small-container-title'>Functional Training</h5>
-
-  <p className='small-container-parent-text'>Achieve your fitness goals with flexible membership plans tailored to suit</p>
-
-      </div>
-
     </div>
-</div>
-  </div>
-  <div  className='chooseContainer'>
-  <div  className='small-container'>
-    <div className='small-container-imagecontainer'>
-    <div className="small-container-image-radius">
-  <img
-    src="https://cdn-icons-png.flaticon.com/128/3043/3043888.png"
-    alt="Rounded Icon"
-    className="small-container-image"
-  />
-</div>
-      <div>
-    <h5 className='small-container-title'>Cardio Training</h5>
-
-  <p className='small-container-parent-text'>Achieve your fitness goals with flexible membership plans tailored to suit</p>
-
-      </div>
-
-    </div>
-</div>
-<div  className='small-container'>
-    <div className='small-container-imagecontainer'>
-    <div className="small-container-image-radius">
-  <img
-    src="https://cdn-icons-png.flaticon.com/128/3043/3043888.png"
-    alt="Rounded Icon"
-    className="small-container-image"
-  />
-</div>
-      <div>
-    <h5 className='small-container-title'>Zumba Classes</h5>
-
-  <p className='small-container-parent-text'>Achieve your fitness goals with flexible membership plans tailored to suit</p>
-
-      </div>
-
-    </div>
-</div>
+   
   </div>
 </div>
-</div>
-<div data-aos="fade-up" className='col-5  chooseParntImage'>
-<div className='choose-image1-parent'>
-  <img  src={'https://img.freepik.com/premium-photo/bearded-athletic-looking-bodybulder-work-out-with-battle-rope-dark-with-smoke-strength-motivation_136403-10333.jpg'} className='choose-image1'/>
-  <img src={'https://images.unsplash.com/photo-1540497077202-7c8a3999166f?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z3ltJTIwZXF1aXBtZW50fGVufDB8fDB8fHww'} className='choose-image1'/>
-
-</div>
-<div className=''>
-  <img  src={'https://img.freepik.com/premium-photo/modern-gym-setting-with-neatly-arranged-dumbbells-fitness-equipmen_1102161-22916.jpg'} className='choose-image2'/>
-</div>
-</div>
+<div className='col-lg-6'></div>
 </div>
 </div>
 <div className='section4 py-5 container-fluid'>
@@ -465,6 +390,82 @@ At Weider, we are dedicated to creating champions and transforming lives. Our gy
 
 
 </div>
+</div>
+{/* <div className='container opinionsection px-4 bg-white'>
+  <div className='row'>
+<div className='jhjhj'>
+  <div className=''>
+  <label>Review</label>
+  <h2>YOUR OPINION</h2>
+  </div>
+  <div className='klklkl'>
+    <button className='btn btn-outline-light my-2 my-sm-0 px-4 py-3 d-md-block bg-primary'> + YOUR OPINION</button>
+  </div>
+ 
+</div>
+<div className=''>
+<div className='col-lg-8 col-md-6 col-sm-12 mb-4'>
+  <h1>images</h1>
+  </div>
+  <div className='col-lg-4 col-md-6 col-sm-12 mb-4'>
+    <h1>opinion</h1>
+  </div>
+</div>
+  </div>
+</div> */}
+<div className='container-fluid kklklklbbb'>
+  <div className='row mx-5'>
+<div className='col-lg-6 '>
+<p className='poilll text-white defaultFontFamily fontWefff text-gap'>---About</p>
+<h2 className='poilll text-white defaultFontFamily fonbbbb text-gap'>We Have Lot Of Experience </h2>
+<h2 className='poilll text-white defaultFontFamily fonbbbb text-gap'>Gym Training</h2>
+<div className='container '>
+  <div className='row '>
+  <div className='col-lg-6 '>
+  <div className=''>
+<img src={'https://images.unsplash.com/photo-1577221084712-45b0445d2b00?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Ym9keWJ1aWxkaW5nfGVufDB8fDB8fHww'} className='pkfggg'/>
+</div>
+  </div>
+  <div className='col-lg-6 '>
+  {/* <div className='sideContetabout'> */}
+  <p className='    text-gap hhhhhhhbb paragrafdd'>Many individual benifits from personalized Workout plans designed by the fitness professional or personal trainers to address the  specific fitness goals such as muscle gain,weight loss are improved athletic perfomance</p>
+  <div className=' bvbvb'>
+  <div className='lineSeparator3'/>
+<p className='textsixzelinesepatt text-gap'>Over 15 Years of experience</p>
+  </div>
+  <div className=' bvbvb'>
+  <div className='lineSeparator3'/>
+<p className='textsixzelinesepatt text-gap'>Certificate trainer</p>
+  </div>
+  <div className=' bvbvb'>
+  <div className='lineSeparator3'/>
+<p className='textsixzelinesepatt text-gap'>Exceptional Work Quality</p>
+  </div>
+{/* </div> */}
+<button 
+                        className="btn btn-outline-black my-2 my-sm-0 px-5 py-3 text-gap smallButton"
+                        type="submit"
+                      
+                    >
+              learn more
+                    </button>
+  </div>
+
+ 
+
+  </div>
+
+
+</div>
+</div>
+<div className='col-lg-6 '>
+  <div className=''>
+  <img src={'https://i.pinimg.com/originals/85/17/2b/85172b91c1d84d666a1fc715965498b4.png'} className='aboutImage'/>
+
+  </div>
+</div>
+  </div>
+
 </div>
 </div>
     )
