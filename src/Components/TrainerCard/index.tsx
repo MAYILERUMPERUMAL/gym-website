@@ -9,8 +9,7 @@ const TrainerCard: FC<TrainerCardProps> = ({image,trainerName}) => {
          backgroundImage: `url(${image})`,
          backgroundRepeat: 'no-repeat',
          backgroundSize: 'cover',
-         height: '500px',
-         width: '400px',
+        width:'100%',
          position: 'relative'
       }}>
         <div className="bnbnbn">

@@ -5,7 +5,7 @@ import { HomeScreen } from './Module';
 
 function App() {
   return (
-    <div className="App bg-primary">
+    <div className="App">
      <HomeScreen/>
     </div>
   );

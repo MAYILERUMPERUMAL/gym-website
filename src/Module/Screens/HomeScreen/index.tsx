@@ -260,12 +260,12 @@ At Weider, we are dedicated to creating champions and transforming lives. Our gy
 </div>
 </div>
 </div> */}
-<div className="container-fluid nhnnn">
+<div className="container-md nhnnn">
 <div className='featursStyle px-3 mx-2 opp'>
     <h1 data-aos="fade-up" className='text-white defaultFontFamily fontWefff text-gap'>Our Pricing</h1>
     <p data-aos="fade-up" className=' paragraphText defaultFontFamily text-white text-gap'>Achieve your fitness goals with flexible membership plans tailored to suit your needs and budget.</p>
   </div>
-  <div className="row njm">
+  <div className="row ">
     <div className="col-lg-4 col-md-6 col-sm-12 mb-4">
       <PricingCard
         CardTitLe={"Monthly Plan"}
@@ -374,7 +374,7 @@ At Weider, we are dedicated to creating champions and transforming lives. Our gy
 <div className='col-lg-6'></div>
 </div>
 </div>
-<div className='section4 py-5 container-fluid'>
+<div className='section4 py-5 container-md '>
 <h1 data-aos="fade-up"className='text-white defaultFontFamily fontWefff text-gap'>Meet Our Trainers</h1>
 <p data-aos="fade-up" className=' paragraphText defaultFontFamily text-white text-gap'>Achieve your fitness goals with flexible membership <br/>plans tailored to suit your needs and budget.</p>
 <div className='row py-5'>
@@ -413,7 +413,7 @@ At Weider, we are dedicated to creating champions and transforming lives. Our gy
 </div>
   </div>
 </div> */}
-<div className='container-fluid kklklklbbb'>
+<div className='container-md kklklklbbb'>
   <div className='row mx-5'>
 <div className='col-lg-6 '>
 <p className='poilll text-white defaultFontFamily fontWefff text-gap'>---About</p>
