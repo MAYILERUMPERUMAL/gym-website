@@ -165,32 +165,51 @@ display: flex;
     color: #fff;
     background: #e31c25;
 }
+.lklkllk{
+    font-family: 'Rubik';
+    justify-self: flex-start;
+    text-align: start;
+}
 .nnbbb{
-    flex:1;
-    display: flex;
+    /* flex:1; */
+   
+    /* flex-direction: row; */
+}
+.chooseTitle{
+   font-weight: 600; 
 }
 .dcdcdcdcd{
     height:40%;
     position: relative;
-    background-color: #dc3545;
+    /* background-color: #dc3545; */
     display:flex ;
     /* width: 0; */
     margin: 0;
     padding: 0;
 }
 .gfffcc{
-    position: absolute;
- left:35%;
- right: 20px;
-top: -10px;
-    background-color: #fff;
-    z-index: 999;
+   
+    /* background-color: black; */
     width: 35px;
     height: 35px;
+    filter: brightness(0) invert(1);
+    
+}
+.tytytyt{
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    align-content: center;
+    z-index: 999;
+background-color: rgb(17,17,17);
+    left:35%;
+    right: 20px;
+   top: -10px;
+   
 }
 .bvbvbv{
-    height: 40%;
-    width: 40%;
+    height: auto;
+    width: 50%;
 }
 .pkfggg{
 background-repeat: no-repeat;
@@ -425,6 +444,46 @@ height: 100px;
 
     
 }
+.owl-theme1 .item {
+    background: #4caf50;
+    height: 200px;
+    width: 200px;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    color: #fff;
+    margin: 10px;
+  }
+.owl-theme1 .owl-nav {
+    display: flex;
+    margin:0;
+    padding: 0;
+    justify-content: space-between;
+  }
+  
+  .owl-theme1 .owl-nav [class*="owl-"] {
+    color: #fff;
+    font-size: 20px;
+    background: #869791;
+    padding: 4px 7px;
+    margin: 5px;
+    border-radius: 3px;
+  }
+  
+  .owl-theme1 .owl-dots .owl-dot {
+    width: 10px;
+    height: 10px;
+    margin: 5px;
+    background: #ccc;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  .owl-theme1 .owl-dots .owl-dot.active {
+    background: #4caf50;
+  }
+  
 .textColor{
     color:white
 }
@@ -722,6 +781,7 @@ font-weight:600;
 }
 .section4{
     /* height: 100vh; */
+    margin-top: 80px;
     background-color: #fff;
 }
 .image-container {
@@ -729,6 +789,9 @@ font-weight:600;
     height: 200px;
     overflow: hidden;
     transition: all 1.5s ease-in-out;
+  }
+  .kopm{
+    background-color: black;
   }
   
   .image-container.portrait img {
@@ -756,7 +819,7 @@ font-weight:600;
     font-size: 1.5rem;
 }
 .gbg{
-background-color: #dc3545;
+/* background-color: #dc3545; */
 
 }
 .featureParagraphfont{

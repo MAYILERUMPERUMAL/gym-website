@@ -1,0 +1,61 @@
+.featureCard-container {
+    position: relative;
+    width: 100%;
+    display: inline-block;
+    /* height: 200px; */
+    overflow: hidden;
+  }
+  
+  .featureCardImage1 {
+    /* background-image: url('https://thumbs.dreamstime.com/b/handsome-muscular-man-dumbbells-working-out-gym-doing-exercise-56914918.jpg'); */
+    background-repeat: no-repeat;
+    background-size:cover;
+ height: 400px;
+ width: 100%;
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+    
+  }
+  .hjhjhhjvv {
+    /* height: 500px; */
+    /* background-color: aqua; */
+    background-color: white;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+  .mkl{
+    position:absolute;
+display: flex;
+flex-direction: column;
+    height: 100px;
+    width: 95%;
+    border-radius: 10px;
+    background-color: rgb(21,25,34,0.7);
+  }
+  .titleHeading{
+    color: white;
+  }
+  .ourFeatureSecondarybutton{
+    display:flex;
+    border-bottom: 4px solid #fff;
+  }
+  .readmoreArrow{
+   width: 5%;
+   height: 10%;
+    
+  }
+  .fontFamilyp{
+    font-family: 'Rubik';
+    font-weight: 600;
+    font-size: 12px;
+  }
+ .ourFeatureSecondarybutton:hover{
+  border-bottom: 4px solid red;
+ }
+ .readMoreButton{
+  color: #fff;
+ }
+ .readMoreButton:hover{
+  color: red;
+ }

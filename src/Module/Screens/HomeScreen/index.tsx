@@ -1,7 +1,7 @@
 import React,{FC,useEffect,useState} from 'react'
 import { HomeProps } from './interface'
 import  './HomeScreen.css'
-import { Button, PricingCard, TextInput, TrainerCard } from '../../../Components'
+import { Button, OurFeature, PricingCard, TextInput, TrainerCard } from '../../../Components'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import OwlCarousel from 'react-owl-carousel';
@@ -16,6 +16,7 @@ import 'swiper/css/scrollbar';
 import '@fontsource/rubik'
 import { icons } from '../../../Assest';
 import { LineText } from '../../../Components/LineText';
+import { GoArrowRight } from "react-icons/go";
 const HomeScreen:FC<HomeProps>=()=>{
   const [drawerOpen, setDrawerOpen] = useState(false);
 
@@ -45,6 +46,20 @@ const options = {
     "<span class='carousel-nav-arrow'>&#8250;</span>", // Custom right arrow
   ],
 };
+const options1 = {
+  loop: true,
+  margin: 10,
+  nav: true,
+  dots: false,
+  autoplay: true,
+  autoplayTimeout: 8000,
+  smartSpeed: 800,
+  responsive: {
+    0: { items: 1 },
+    200: { items: 2 },
+    800: { items: 3 },
+  },
+};
 const images = [
   {
     id: 1,
@@ -73,11 +88,18 @@ const handleMouseEnter = (index:any) => {
 const handleMouseLeave = () => {
   setHoveredIndex(null);
 };
+const ourFeatureData=[{id:1,imagesrc:'https://img.freepik.com/free-photo/fitness-woman-doing-cardio-gym_651396-642.jpg',title:'Cardio',subTitle:'Be the strength and that losse fat'},
+  {id:2,imagesrc:'https://thumbs.dreamstime.com/b/handsome-muscular-man-dumbbells-working-out-gym-doing-exercise-56914918.jpg',title:'Strength & Training',subTitle:'Be the strength and that losse fat'},
+  {id:3,imagesrc:'https://images.pexels.com/photos/1431283/pexels-photo-1431283.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',title:'Weight training',subTitle:'Be the strength and that losse fat'},
+  {id:4,imagesrc:'https://images.pexels.com/photos/1431283/pexels-photo-1431283.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',title:'Zumba classes',subTitle:'Be the strength and that losse fat'}
+
+]
     return(
 <div className='appConatiner' onScroll={()=>{console.log('ljkhjkhkjhkjh');
 }}>
-    
-<nav className="navbar navbar-light   NavBarStyle">
+   <div className='kopm'>
+
+<nav className="navbar navbar-light   NavBarStyle mx-5">
                 <a className="navbar-brand">
                     <img
                         src="https://e7.pngegg.com/pngimages/849/757/png-clipart-mr-olympia-physical-fitness-fitness-centre-bodybuilding-bench-bodybuilding-physical-fitness-hand-thumbnail.png"
@@ -142,6 +164,7 @@ const handleMouseLeave = () => {
                 {/* Overlay for closing drawer */}
                 {drawerOpen && <div className="backdrop" onClick={toggleDrawer}></div>}
             </nav>
+            </div> 
 
             <OwlCarousel  className="owl-theme ssss" {...options}>
 {images.map((slide) => (
@@ -263,7 +286,7 @@ At Weider, we are dedicated to creating champions and transforming lives. Our gy
 <div className="container-md nhnnn">
 <div className='featursStyle px-3 mx-2 opp'>
     <h1 data-aos="fade-up" className='text-white defaultFontFamily fontWefff text-gap'>Our Pricing</h1>
-    <p data-aos="fade-up" className=' paragraphText defaultFontFamily text-white text-gap'>Achieve your fitness goals with flexible membership plans tailored to suit your needs and budget.</p>
+    <p data-aos="fade-up" className=' paragraphText defaultFontFamily text-white text-gap'>Achieve your fitness goals with flexible membership plans<br/> tailored to suit your needs and budget.</p>
   </div>
   <div className="row ">
     <div className="col-lg-4 col-md-6 col-sm-12 mb-4">
@@ -350,28 +373,82 @@ At Weider, we are dedicated to creating champions and transforming lives. Our gy
  
 </div> */}
 
-<div className='AboutSection container-fluid'>
+<div className='AboutSection container-md'>
 <div className='featursStyle px-3 mx-2 opp'>
     <h1 data-aos="fade-up" className='text-white defaultFontFamily fontWefff text-gap'>Why Choose Us</h1>
-    <p data-aos="fade-up" className=' paragraphText defaultFontFamily text-white text-gap'>Achieve your fitness goals with flexible membership plans tailored to suit your needs and budget.</p>
+    <p data-aos="fade-up" className=' paragraphText defaultFontFamily text-white text-gap'>Achieve your fitness goals with flexible membership plans<br/> tailored to suit your needs and budget.</p>
   </div>
-<div className='row hhhhhvcmm'>
-<div className='col-lg-6 bg-primary'>
+<div className='row my-3'>
+<div data-aos="fade-up"  className=' col-lg-6 '>
   <div className='ppllkk '>
     <div className='dcdcdcdcd'>
+{/* <div className='tytytyt'>
+<img src={'https://cdn-icons-png.flaticon.com/128/4744/4744822.png'} className='gfffcc'/>
 
- <img src={'https://cdn-icons-png.flaticon.com/128/4744/4744822.png'} className='gfffcc'/>
+</div> */}
    
-    <img src={'https://t3.ftcdn.net/jpg/06/54/88/58/360_F_654885835_AjYViDaZKYEjpRWEDLZWrqg7MgN9GQur.jpg'} className='bvbvbv'/>
- <div className='bg-secondary nnbbb'>
-    <h3>Video Instruction</h3>
-
+    <img src={'https://images.pexels.com/photos/1547248/pexels-photo-1547248.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'} className='bvbvbv'/>
+ <div className=' nnbbb mx-3'>
+    <h3 className='lklkllk chooseTitle'>Video Instruction</h3>
+<p className='lklkllk'>Sit lorem ipsum et diam elitr est dolor sed duo. Guberg sea et et lorem dolor sed est sit invidunt, dolore tempor diam ipsum takima erat tempor</p>
     </div>
     </div>
    
   </div>
 </div>
-<div className='col-lg-6'></div>
+<div data-aos="fade-up" className='col-lg-6'>
+<div className='ppllkk '>
+    <div className='dcdcdcdcd'>
+{/* <div className='tytytyt'>
+<img src={'https://cdn-icons-png.flaticon.com/128/4744/4744822.png'} className='gfffcc'/>
+
+</div> */}
+   
+    <img src={'https://img.freepik.com/premium-photo/principles-rules-healthy-lifestyle-with-proper-nutrition-balanced-diet-vegetarian-vegetables-fruits-keto-ketosis-ketones-ketogenic-diet-food-low-carbs-products-antiage_771426-6193.jpg'} className='bvbvbv'/>
+ <div className=' nnbbb mx-3'>
+    <h3 className='lklkllk chooseTitle'>Nutrition Diet</h3>
+<p className='lklkllk'>Sit lorem ipsum et diam elitr est dolor sed duo. Guberg sea et et lorem dolor sed est sit invidunt, dolore tempor diam ipsum takima erat tempor</p>
+    </div>
+    </div>
+   
+  </div>
+</div>
+</div>
+<div className='row hhhhhvcmm py-5'>
+<div data-aos="fade-up" className='col-lg-6 '>
+  <div className='ppllkk '>
+    <div className='dcdcdcdcd'>
+{/* <div className='tytytyt'>
+<img src={'https://cdn-icons-png.flaticon.com/128/4744/4744822.png'} className='gfffcc'/>
+
+</div> */}
+   
+    <img src={'https://wallpapers.com/images/hd/fitness-background-u9jc004cjnx8h5zr.jpg'} className='bvbvbv'/>
+ <div className=' nnbbb mx-3'>
+    <h3 className='lklkllk chooseTitle'>Calendar Training</h3>
+<p className='lklkllk'>Sit lorem ipsum et diam elitr est dolor sed duo. Guberg sea et et lorem dolor sed est sit invidunt, dolore tempor diam ipsum takima erat tempor</p>
+    </div>
+    </div>
+   
+  </div>
+</div>
+<div data-aos="fade-up" className='col-lg-6'>
+<div className='ppllkk '>
+    <div className='dcdcdcdcd'>
+{/* <div className='tytytyt'>
+<img src={'https://cdn-icons-png.flaticon.com/128/4744/4744822.png'} className='gfffcc'/>
+
+</div> */}
+   
+    <img src={'https://5.imimg.com/data5/TN/XB/GLADMIN-50969022/crossfit-and-trx-classes-500x500.png'} className='bvbvbv'/>
+ <div className=' nnbbb mx-3'>
+    <h3 className='lklkllk chooseTitle'>Personal  Trainer</h3>
+<p className='lklkllk'>Sit lorem ipsum et diam elitr est dolor sed duo. Guberg sea et et lorem dolor sed est sit invidunt, dolore tempor diam ipsum takima erat tempor</p>
+    </div>
+    </div>
+   
+  </div>
+</div>
 </div>
 </div>
 <div className='section4 py-5 container-md '>
@@ -413,6 +490,27 @@ At Weider, we are dedicated to creating champions and transforming lives. Our gy
 </div>
   </div>
 </div> */}
+<div className='container-md py-5'>
+  <div className='row'>
+  <h1 data-aos="fade-up"className='text-white defaultFontFamily fontWefff text-gap'>Our Upcoming Classes</h1>
+  <p data-aos="fade-up" className=' paragraphText defaultFontFamily text-white text-gap'>Achieve your fitness goals with flexible membership <br/>plans tailored to suit your needs and budget.</p>
+  <div data-aos="fade-up" className='py-5'>
+  <OwlCarousel  className="owl-theme1 " {...options1}>
+  {ourFeatureData.map((ele)=>{
+    return(
+<OurFeature title={ele.title} subTitlle={ele.subTitle} image={ele.imagesrc}/>
+      
+    )
+  })}
+    </OwlCarousel>
+  </div>
+ 
+      
+  
+
+  </div>
+
+</div>
 <div className='container-md kklklklbbb'>
   <div className='row mx-5'>
 <div className='col-lg-6 '>
@@ -467,6 +565,7 @@ At Weider, we are dedicated to creating champions and transforming lives. Our gy
   </div>
 
 </div>
+
 </div>
     )
 }

@@ -4,7 +4,7 @@ import './PricingCard.css';
 
 const PricingCard: FC<PricingCardProps> = ({ CardTitLe, CardSubTitle, monthlyPricing, ptPricing, ImageUrl,forFees }) => {
     return (
-        <div  className='pricing-block mx-3'>
+        <div  className='pricing-block'>
             <div 
             data-aos="fade-up"
                 className='inner-box'
