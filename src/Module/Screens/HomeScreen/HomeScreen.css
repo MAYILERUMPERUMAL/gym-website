@@ -21,7 +21,6 @@ height: 100vh;
     background-position: center; /* Ensures the image is centered */
   }
   .AboutSection{
-    height: 100vh;
     background-color: white;
   }
   @media (max-width: 767px) {  /* For smaller screens like mobile */
@@ -78,6 +77,45 @@ height: 100vh;
     display: block;
     unicode-bidi: isolate;
 } */
+ .ppppppnnm{
+ 
+ }
+ .mjiosxp{
+    height: 250px;
+    width: 250px;
+border-radius: 100px;
+
+ }
+ .vcvcvc{
+    height: 350px;
+   justify-items: center;
+  align-content: center;
+ }
+ .ghggbb{
+    justify-content: center;
+    align-content: center;
+ }
+ .clusterq{
+    height: 400px;
+    width: 100%;
+    /* margin: 50px; */
+    background-color:rgb(217,214,196);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.8);
+    border-width: 2px;
+    border-radius: 20px;
+   
+ }
+ .mlki{
+
+ }
+ .ssccxx{
+    font-size: 50px;
+ }
+ .imageRoiundedf{
+    height: 100%;
+    width: 100%;
+    border-radius: 100%;
+ }
 .imageStyle{
     height: 80px;
     width: 80px;
@@ -143,6 +181,18 @@ h2.fonbbbb{
 .klkjnnn{
     display: flex;
     flex-direction:column;
+}
+.imageConatinerAbout{
+    /* background-image: url('https://c4.wallpaperflare.com/wallpaper/206/268/839/pose-muscle-muscle-rod-press-hd-wallpaper-preview.jpg'); */
+background-repeat: no-repeat;
+background-attachment: fixed;
+ /* background-color:black; */
+background-size:contain;
+height:500px;
+width: 100%;
+
+/* background-position: calc(50% - -10px) center; */
+margin: 0px;
 }
 .smallButton{
  font-size: 12px;
@@ -782,7 +832,7 @@ font-weight:600;
 .section4{
     /* height: 100vh; */
     margin-top: 80px;
-    background-color: #fff;
+   background-color:lightgrey;
 }
 .image-container {
     width: 30%;
@@ -885,11 +935,38 @@ align-items: center;
     font-weight: 600;
     
 }
+.bgb{
+    font-family: 'Rubik';
+    font-weight: 600;
+}
 .lineSeparator3{
-    height: 0.9%;
-    width: 15%;
-    background-color:black;
+    height:3px ;
+    width: 60px;
+    background-color:red;
+    margin-right: 10px;
   
+}
+.btn-lightcc{
+    background-color: #000; /* Light black (gray) */
+    color: #fff; /* White text */
+    border: none;
+}
+.btn-lightcc:hover {
+    background-color: #000; /* Dark black on hover */
+    color: #fff; /* White text on hover */
+  }
+
+.textalign{
+    text-align: start;
+    font-family: 'Rubik';
+}
+.textalignWeight{
+    font-weight:bold;
+}
+.nbnmm{
+    display: flex;
+    justify-self: flex-start;
+   align-items: center;
 }
 .hhhhhhhbb{
     text-align: start;

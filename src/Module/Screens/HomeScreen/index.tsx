@@ -17,6 +17,7 @@ import '@fontsource/rubik'
 import { icons } from '../../../Assest';
 import { LineText } from '../../../Components/LineText';
 import { GoArrowRight } from "react-icons/go";
+import CountUp from 'react-countup';
 const HomeScreen:FC<HomeProps>=()=>{
   const [drawerOpen, setDrawerOpen] = useState(false);
 
@@ -94,6 +95,10 @@ const ourFeatureData=[{id:1,imagesrc:'https://img.freepik.com/free-photo/fitness
   {id:4,imagesrc:'https://images.pexels.com/photos/1431283/pexels-photo-1431283.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',title:'Zumba classes',subTitle:'Be the strength and that losse fat'}
 
 ]
+
+const images3=[
+  {id:1,imagesrc:'https://media.istockphoto.com/id/852401732/photo/happy-personal-trainer-working-at-the-gym.jpg?s=612x612&w=0&k=20&c=m4Wk3lVvjEFIHbiAfUuFNBwEhvvSgf4Vv5ib9JUsrJk='},
+  {id:2,imagesrc:'https://img.freepik.com/premium-photo/strong-personal-trainer_93675-20711.jpg'}]
     return(
 <div className='appConatiner' onScroll={()=>{console.log('ljkhjkhkjhkjh');
 }}>
@@ -226,19 +231,19 @@ const ourFeatureData=[{id:1,imagesrc:'https://img.freepik.com/free-photo/fitness
 </OwlCarousel>
          <div className='  d-flex secondaryContent'>
           <div className=''>
-            <h4 className='fontColro defaultFontFamily fontSize text-gap'>5+</h4>
+            <h4 className='fontColro defaultFontFamily fontSize text-gap'><CountUp end={50} duration={5} />+</h4>
             <p className='fontColro paragraphFont defaultFontFamily text-gap'>Year of services</p>
           </div>
           <div>
-            <h4 className='fontColro defaultFontFamily fontSize text-gap'>10+</h4>
+            <h4 className='fontColro defaultFontFamily fontSize text-gap'><CountUp end={30} duration={5} />+</h4>
             <p className='fontColro paragraphFont defaultFontFamily text-gap'>Certificate trainers</p>
           </div>
           <div>
-            <h4 className='fontColro defaultFontFamily fontSize text-gap'>586+</h4>
+            <h4 className='fontColro defaultFontFamily fontSize text-gap'><CountUp end={589} duration={5} />+</h4>
             <p className='fontColro paragraphFont defaultFontFamily text-gap'>Happy members</p>
           </div>
           <div>
-            <h4 className='fontColro defaultFontFamily fontSize text-gap'>95%</h4>
+            <h4 className='fontColro defaultFontFamily fontSize text-gap'><CountUp end={95} duration={5} />%</h4>
             <p className='fontColro paragraphFont defaultFontFamily text-gap'>Customer satisfaction</p>
           </div>
          </div>
@@ -283,6 +288,50 @@ At Weider, we are dedicated to creating champions and transforming lives. Our gy
 </div>
 </div>
 </div> */}
+
+<div className='container-fluid py-5'>
+  <div className='row'>
+<div data-aos="fade-right" className='col-lg-6  col-sm-12 '>
+<img className='imageConatinerAbout' src='https://t4.ftcdn.net/jpg/04/02/70/55/360_F_402705540_709LczeRSfETWMnwHuJPMA7OQJP2FyZD.jpg'/>
+
+
+</div>
+<div data-aos="fade-up" className='col-lg-6  col-sm-12 pb-4'>
+  <div className='nbnmm py-2'>
+  <div className='lineSeparator3 '/>
+  <h4 className='bgb text-gap '>About Us</h4>
+
+  </div>
+
+ <h1 className='textalign textalignWeight text-gap  ssccxx'>Unleashing Potential with <br/>Intense Fitness Workouts</h1>
+ <p className='textalign text-gap py-2'>Body fitness encompasses various aspects of physical health and well-being, involving a combination of exercise, nutrition, and lifestyle choices. Achieving and maintaining optimal body fitness contributes to overall health, vitality.</p>
+ <div className='nbnmm py-2'>
+  <div className='lineSeparator3'/>
+  <h6 className='bgb text-gap'>Over 15 years of experience</h6>
+
+  </div>
+  <div className='nbnmm py-2'>
+  <div className='lineSeparator3'/>
+  <h6 className='bgb text-gap'>Certified Trainers</h6>
+  </div>
+  <div className='nbnmm  py-2 pb-3'>
+  <div className='lineSeparator3'/>
+  <h6 className='bgb text-gap'>Exceptional work quality</h6>
+  </div>
+  <button
+    className="btn btn-lightcc bg-black my-2 my-sm-0 px-5 py-3 d-none d-md-block text-gap"
+    type="submit"
+>
+    More About
+</button>
+
+  </div>
+
+  </div>
+
+
+
+</div>
 <div className="container-md nhnnn">
 <div className='featursStyle px-3 mx-2 opp'>
     <h1 data-aos="fade-up" className='text-white defaultFontFamily fontWefff text-gap'>Our Pricing</h1>
@@ -451,7 +500,7 @@ At Weider, we are dedicated to creating champions and transforming lives. Our gy
 </div>
 </div>
 </div>
-<div className='section4 py-5 container-md '>
+<div className='section4  container-md'>
 <h1 data-aos="fade-up"className='text-white defaultFontFamily fontWefff text-gap'>Meet Our Trainers</h1>
 <p data-aos="fade-up" className=' paragraphText defaultFontFamily text-white text-gap'>Achieve your fitness goals with flexible membership <br/>plans tailored to suit your needs and budget.</p>
 <div className='row py-5'>
@@ -511,61 +560,40 @@ At Weider, we are dedicated to creating champions and transforming lives. Our gy
   </div>
 
 </div>
-<div className='container-md kklklklbbb'>
-  <div className='row mx-5'>
-<div className='col-lg-6 '>
-<p className='poilll text-white defaultFontFamily fontWefff text-gap'>---About</p>
-<h2 className='poilll text-white defaultFontFamily fonbbbb text-gap'>We Have Lot Of Experience </h2>
-<h2 className='poilll text-white defaultFontFamily fonbbbb text-gap'>Gym Training</h2>
-<div className='container '>
-  <div className='row '>
-  <div className='col-lg-6 '>
-  <div className=''>
-<img src={'https://images.unsplash.com/photo-1577221084712-45b0445d2b00?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Ym9keWJ1aWxkaW5nfGVufDB8fDB8fHww'} className='pkfggg'/>
-</div>
-  </div>
-  <div className='col-lg-6 '>
-  {/* <div className='sideContetabout'> */}
-  <p className='    text-gap hhhhhhhbb paragrafdd'>Many individual benifits from personalized Workout plans designed by the fitness professional or personal trainers to address the  specific fitness goals such as muscle gain,weight loss are improved athletic perfomance</p>
-  <div className=' bvbvb'>
-  <div className='lineSeparator3'/>
-<p className='textsixzelinesepatt text-gap'>Over 15 Years of experience</p>
-  </div>
-  <div className=' bvbvb'>
-  <div className='lineSeparator3'/>
-<p className='textsixzelinesepatt text-gap'>Certificate trainer</p>
-  </div>
-  <div className=' bvbvb'>
-  <div className='lineSeparator3'/>
-<p className='textsixzelinesepatt text-gap'>Exceptional Work Quality</p>
-  </div>
-{/* </div> */}
-<button 
-                        className="btn btn-outline-black my-2 my-sm-0 px-5 py-3 text-gap smallButton"
-                        type="submit"
-                      
-                    >
-              learn more
-                    </button>
-  </div>
 
- 
+<div className='container-md'>
+<h1 data-aos="fade-up" className='text-white defaultFontFamily fontWefff text-gap'>Our Blogs</h1>
+<OwlCarousel  className="owl-theme ssss" {...options}>
+{images3.map((slide) => (
+                <div
+                    key={slide.id}
+                    className="clusterq"
+                    
+                >
+                  <div className='container-fluid mlki'>
+                    <div className='row'>
+                      <div className='col-4  vcvcvc'>
+                      <div className='mjiosxp '>
+               <img src={'https://img.freepik.com/premium-photo/strong-personal-trainer_93675-20711.jpg'} className='imageRoiundedf'/>
 
-  </div>
-
+               </div>
+                      </div>
+                      <div className='col-8 '>
+                      <div className=''>
+                <h3>{`"The complete item Was Delightful,and Worth Each  Penny I Would totally Suggest Barogue,The group at Barogue in unimaginablly.Educated And Supportive"`}</h3>
+                <h5 className='justify-self-flex-start'>{'Alex carel'}</h5>
+               </div>
+                      </div>
+                    </div>
+                
+            
+                  </div>
+             
+                </div>
+            ))}
+</OwlCarousel>
 
 </div>
-</div>
-<div className='col-lg-6 '>
-  <div className=''>
-  <img src={'https://i.pinimg.com/originals/85/17/2b/85172b91c1d84d666a1fc715965498b4.png'} className='aboutImage'/>
-
-  </div>
-</div>
-  </div>
-
-</div>
-
 </div>
     )
 }
