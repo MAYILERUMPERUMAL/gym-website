@@ -1,7 +1,7 @@
 import React,{FC,useEffect,useState} from 'react'
 import { HomeProps } from './interface'
 import  './HomeScreen.css'
-import { Button, OurFeature, PricingCard, TextInput, TrainerCard } from '../../../Components'
+import { Button, ClientRatingsCard, OurFeature, PricingCard, TextInput, TrainerCard } from '../../../Components'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import OwlCarousel from 'react-owl-carousel';
@@ -60,6 +60,23 @@ const options1 = {
     200: { items: 2 },
     800: { items: 3 },
   },
+  
+
+};
+
+const options2 = {
+  loop: true,
+  margin: 10,
+  nav: true,
+  dots: true,
+  autoplay: true,
+  autoplayTimeout: 8000,
+  smartSpeed: 800,
+  responsive: {
+    0: { items: 1 },
+  
+  },
+  
 };
 const images = [
   {
@@ -99,6 +116,10 @@ const ourFeatureData=[{id:1,imagesrc:'https://img.freepik.com/free-photo/fitness
 const images3=[
   {id:1,imagesrc:'https://media.istockphoto.com/id/852401732/photo/happy-personal-trainer-working-at-the-gym.jpg?s=612x612&w=0&k=20&c=m4Wk3lVvjEFIHbiAfUuFNBwEhvvSgf4Vv5ib9JUsrJk='},
   {id:2,imagesrc:'https://img.freepik.com/premium-photo/strong-personal-trainer_93675-20711.jpg'}]
+  const clientSays=[
+    {id:1,imagesrc:'https://media.istockphoto.com/id/852401732/photo/happy-personal-trainer-working-at-the-gym.jpg?s=612x612&w=0&k=20&c=m4Wk3lVvjEFIHbiAfUuFNBwEhvvSgf4Vv5ib9JUsrJk='},
+    {id:2,imagesrc:'https://img.freepik.com/premium-photo/strong-personal-trainer_93675-20711.jpg'}  
+  ]
     return(
 <div className='appConatiner' onScroll={()=>{console.log('ljkhjkhkjhkjh');
 }}>
@@ -292,38 +313,25 @@ At Weider, we are dedicated to creating champions and transforming lives. Our gy
 <div className='container-fluid py-5'>
   <div className='row'>
 <div data-aos="fade-right" className='col-lg-6  col-sm-12 '>
-<img className='imageConatinerAbout' src='https://t4.ftcdn.net/jpg/04/02/70/55/360_F_402705540_709LczeRSfETWMnwHuJPMA7OQJP2FyZD.jpg'/>
+<img className='imageConatinerAbout' src={icons.AboutImage}/>
 
 
 </div>
-<div data-aos="fade-up" className='col-lg-6  col-sm-12 pb-4'>
-  <div className='nbnmm py-2'>
-  <div className='lineSeparator3 '/>
-  <h4 className='bgb text-gap '>About Us</h4>
+<div data-aos="fade-up" className='col-lg-6  col-sm-12 pb-4 '>
+ <h1 className='sectionAboutText'>ABOUT US</h1>
+ <h3  className=' paragraphText defaultFontFamily text-white text-gap cdf'>We are best For Fitness & Body building</h3>
+<p className='text-gap cdfa'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate dolores incidunt suscipit. Delectus dolor eius esse explicabo magni omnis porro quo sunt vero voluptas. Deleniti esse, exercitationem fugit, minus mollitia nam nostrum obcaecati provident quam quos, sapiente similique suscipit unde voluptate.</p>
 
-  </div>
-
- <h1 className='textalign textalignWeight text-gap  ssccxx'>Unleashing Potential with <br/>Intense Fitness Workouts</h1>
- <p className='textalign text-gap py-2'>Body fitness encompasses various aspects of physical health and well-being, involving a combination of exercise, nutrition, and lifestyle choices. Achieving and maintaining optimal body fitness contributes to overall health, vitality.</p>
- <div className='nbnmm py-2'>
-  <div className='lineSeparator3'/>
-  <h6 className='bgb text-gap'>Over 15 years of experience</h6>
-
-  </div>
-  <div className='nbnmm py-2'>
-  <div className='lineSeparator3'/>
-  <h6 className='bgb text-gap'>Certified Trainers</h6>
-  </div>
-  <div className='nbnmm  py-2 pb-3'>
-  <div className='lineSeparator3'/>
-  <h6 className='bgb text-gap'>Exceptional work quality</h6>
-  </div>
-  <button
-    className="btn btn-lightcc bg-black my-2 my-sm-0 px-5 py-3 d-none d-md-block text-gap"
+<p className='text-gap cdfa'>Consectetur dolor sit amet adipisicing elit. Aspernatur aut dolor doloribus eligendi eveniet ex exercitationem fugiat illum, iusto magni molestiae nihil quas, quo reiciendis sed sequi tempora tempore vero vitae voluptas? Ad nulla, voluptate!</p>
+<div className='madfg'>
+<button
+    className="btn btn-lightcc   my-5 px-4 py-3 d-none d-md-block text-gap piom"
     type="submit"
 >
     More About
 </button>
+</div>
+
 
   </div>
 
@@ -334,7 +342,7 @@ At Weider, we are dedicated to creating champions and transforming lives. Our gy
 </div>
 <div className="container-md nhnnn">
 <div className='featursStyle px-3 mx-2 opp'>
-    <h1 data-aos="fade-up" className='text-white defaultFontFamily fontWefff text-gap'>Our Pricing</h1>
+    <h1 data-aos="fade-up" className='text-white defaultFontFamily fontWefff text-gap'>OUR  PRICING</h1>
     <p data-aos="fade-up" className=' paragraphText defaultFontFamily text-white text-gap'>Achieve your fitness goals with flexible membership plans<br/> tailored to suit your needs and budget.</p>
   </div>
   <div className="row ">
@@ -424,7 +432,7 @@ At Weider, we are dedicated to creating champions and transforming lives. Our gy
 
 <div className='AboutSection container-md'>
 <div className='featursStyle px-3 mx-2 opp'>
-    <h1 data-aos="fade-up" className='text-white defaultFontFamily fontWefff text-gap'>Why Choose Us</h1>
+    <h1 data-aos="fade-up" className='text-white defaultFontFamily fontWefff text-gap'>WHY CHOOSE US</h1>
     <p data-aos="fade-up" className=' paragraphText defaultFontFamily text-white text-gap'>Achieve your fitness goals with flexible membership plans<br/> tailored to suit your needs and budget.</p>
   </div>
 <div className='row my-3'>
@@ -562,36 +570,32 @@ At Weider, we are dedicated to creating champions and transforming lives. Our gy
 </div>
 
 <div className='container-md'>
-<h1 data-aos="fade-up" className='text-white defaultFontFamily fontWefff text-gap'>Our Blogs</h1>
-<OwlCarousel  className="owl-theme ssss" {...options}>
-{images3.map((slide) => (
-                <div
-                    key={slide.id}
-                    className="clusterq"
-                    
-                >
-                  <div className='container-fluid mlki'>
-                    <div className='row'>
-                      <div className='col-4  vcvcvc'>
-                      <div className='mjiosxp '>
-               <img src={'https://img.freepik.com/premium-photo/strong-personal-trainer_93675-20711.jpg'} className='imageRoiundedf'/>
+<div className='row'>
+<div className='col-6 hhxcc'>
+<img src={'https://e1.pxfuel.com/desktop-wallpaper/146/993/desktop-wallpaper-fitness-motivation-women-workout-on-greepx-womens-gym.jpg'} className='clientSaysImage'/>
 
-               </div>
-                      </div>
-                      <div className='col-8 '>
-                      <div className=''>
-                <h3>{`"The complete item Was Delightful,and Worth Each  Penny I Would totally Suggest Barogue,The group at Barogue in unimaginablly.Educated And Supportive"`}</h3>
-                <h5 className='justify-self-flex-start'>{'Alex carel'}</h5>
-               </div>
-                      </div>
-                    </div>
-                
-            
-                  </div>
-             
-                </div>
-            ))}
-</OwlCarousel>
+</div>
+<div className='col-6  '>
+
+  <div className='clentSayscont my-5 bvcff'>
+  <h1 className='tecfalign'>WHAT<br/>CLIENTS SAY</h1>
+<div>
+<OwlCarousel  className="owl-theme1 " {...options2} >
+  {clientSays.map((ele)=>{
+    return(
+     
+<ClientRatingsCard/>
+     
+      
+    )
+  })}
+    </OwlCarousel> 
+</div>
+  </div>
+
+
+</div>
+</div>
 
 </div>
 </div>

@@ -1,0 +1,23 @@
+.RatingsClientImage {
+    background-image: url('https://i.ytimg.com/vi/lYPhUpSvA1I/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBDYOzRpdMXJ8Es9_yvhP8d3mP29Q');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+     /* background-color:black; */
+    background-size: cover;
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+  }
+  
+  .imageContay{
+
+
+  }
+
+  .lklm{
+ 
+  }
+  .frt{
+  display: flex;
+ align-items: center;
+  }
