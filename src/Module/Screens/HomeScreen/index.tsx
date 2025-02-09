@@ -310,7 +310,7 @@ At Weider, we are dedicated to creating champions and transforming lives. Our gy
 </div>
 </div> */}
 
-<div className='container-fluid py-5'>
+<div className='container-md py-5'>
   <div className='row'>
 <div data-aos="fade-right" className='col-lg-6  col-sm-12 '>
 <img className='imageConatinerAbout' src={icons.AboutImage}/>
