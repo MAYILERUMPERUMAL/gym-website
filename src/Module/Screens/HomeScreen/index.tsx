@@ -1,4 +1,4 @@
-import React,{FC,useEffect,useState} from 'react'
+import React,{FC,useEffect,useRef,useState} from 'react'
 import { HomeProps } from './interface'
 import  './HomeScreen.css'
 import { Button, ClientRatingsCard, OurFeature, PricingCard, TextInput, TrainerCard } from '../../../Components'
@@ -120,6 +120,29 @@ const images3=[
     {id:1,imagesrc:'https://media.istockphoto.com/id/852401732/photo/happy-personal-trainer-working-at-the-gym.jpg?s=612x612&w=0&k=20&c=m4Wk3lVvjEFIHbiAfUuFNBwEhvvSgf4Vv5ib9JUsrJk='},
     {id:2,imagesrc:'https://img.freepik.com/premium-photo/strong-personal-trainer_93675-20711.jpg'}  
   ]
+const [startCount,setStartCount]=useState(false)
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setStartCount(true);
+        }
+      },
+      { threshold: 0.5 } // Adjust threshold to trigger when 50% of section is visible
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
     return(
 <div className='appConatiner' onScroll={()=>{console.log('ljkhjkhkjhkjh');
 }}>
@@ -250,24 +273,40 @@ const images3=[
                 </div>
             ))}
 </OwlCarousel>
-         <div className='  d-flex secondaryContent'>
-          <div className=''>
-            <h4 className='fontColro defaultFontFamily fontSize text-gap'><CountUp end={50} duration={5} />+</h4>
-            <p className='fontColro paragraphFont defaultFontFamily text-gap'>Year of services</p>
-          </div>
-          <div>
-            <h4 className='fontColro defaultFontFamily fontSize text-gap'><CountUp end={30} duration={5} />+</h4>
-            <p className='fontColro paragraphFont defaultFontFamily text-gap'>Certificate trainers</p>
-          </div>
-          <div>
-            <h4 className='fontColro defaultFontFamily fontSize text-gap'><CountUp end={589} duration={5} />+</h4>
-            <p className='fontColro paragraphFont defaultFontFamily text-gap'>Happy members</p>
-          </div>
-          <div>
-            <h4 className='fontColro defaultFontFamily fontSize text-gap'><CountUp end={95} duration={5} />%</h4>
-            <p className='fontColro paragraphFont defaultFontFamily text-gap'>Customer satisfaction</p>
-          </div>
-         </div>
+<div className="d-flex secondaryContent" ref={sectionRef}>
+      <div>
+        <h4 className="fontColro defaultFontFamily fontSize text-gap">
+          {startCount ? <CountUp end={50} duration={8} /> : 0}+
+        </h4>
+        <p className="fontColro paragraphFont defaultFontFamily text-gap">
+          Year of services
+        </p>
+      </div>
+      <div>
+        <h4 className="fontColro defaultFontFamily fontSize text-gap">
+          {startCount ? <CountUp end={30} duration={8} /> : 0}+
+        </h4>
+        <p className="fontColro paragraphFont defaultFontFamily text-gap">
+          Certificate trainers
+        </p>
+      </div>
+      <div>
+        <h4 className="fontColro defaultFontFamily fontSize text-gap">
+          {startCount ? <CountUp end={589} duration={8} /> : 0}+
+        </h4>
+        <p className="fontColro paragraphFont defaultFontFamily text-gap">
+          Happy members
+        </p>
+      </div>
+      <div>
+        <h4 className="fontColro defaultFontFamily fontSize text-gap">
+          {startCount ? <CountUp end={95} duration={8} /> : 0}%
+        </h4>
+        <p className="fontColro paragraphFont defaultFontFamily text-gap">
+          Customer satisfaction
+        </p>
+      </div>
+    </div>
 {/* <div className='Section2 container-fluid p-5 contColor'>
 <div className='row gx-5'>
 <div className='col-lg-5 mb-5 mb-lg-0'>
@@ -569,17 +608,17 @@ At Weider, we are dedicated to creating champions and transforming lives. Our gy
 
 </div>
 
-<div className='container-md'>
+<div className='container-fluid'>
 <div className='row'>
 <div className='col-6 hhxcc'>
 <img src={'https://e1.pxfuel.com/desktop-wallpaper/146/993/desktop-wallpaper-fitness-motivation-women-workout-on-greepx-womens-gym.jpg'} className='clientSaysImage'/>
 
 </div>
-<div className='col-6  '>
+<div className='col-6  mjiuk'>
 
-  <div className='clentSayscont my-5 bvcff'>
+  <div className='clentSayscont  bvcff'>
   <h1 className='tecfalign'>WHAT<br/>CLIENTS SAY</h1>
-<div>
+<div className=' col-7'>
 <OwlCarousel  className="owl-theme1 " {...options2} >
   {clientSays.map((ele)=>{
     return(
