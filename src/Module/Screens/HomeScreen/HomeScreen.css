@@ -159,6 +159,9 @@ padding: 0;
 .fontSize{
     font-size: 20px;
 }
+.bnvc{
+    border-radius: 40px;
+}
 .paragraphFont{
 font-size: 14px;
 }
@@ -902,6 +905,11 @@ font-weight:600;
     padding: 0;
     margin: 0;
 }
+.klm{
+    height: 100vh;
+      transition: 0.8s;
+    background: url('https://previews.123rf.com/images/romastudio/romastudio1812/romastudio181200216/117004062-sports-equipment-on-a-black-background-top-view-motivation.jpg') center top  / cover no-repeat;
+}
 .klklkl{
     margin: 0;
     padding: 0;
@@ -954,20 +962,52 @@ align-items: center;
 }
 .tecfalign{
     text-align: start;
-    font-size: 60px;
+    font-size: 50px;
     font-weight:bold;
     font-family: 'Rubik';
   padding-top: 20px;
   margin-left: 10px;
 }
 .bvcff{
-    margin-left: 10%;
     margin-top: 50px;
 }
+.inputChanges {
+    width: 80%;
+    border: 1px solid transparent; /* full transparent border */
+    border-bottom: 1px solid #fff;  /* bottom border is black */
+    outline: none;
+    margin-top: 5%;
+    background-color: transparent;
+    
+}
+.inputChanges::placeholder {
+    color: #FFFFFF;
+    font-style: italic;
+    font-size: 14px;
+}
+.inputChanges:focus {
+    border: 1px solid transparent;
+    border-bottom:1px solid #fff ;
+}
+.inputChangesMesssage {
+    margin-top: 15%;
+    width: 80%;
+    border: none;
+    border-bottom: 1px solid #000;
+    outline: none; /* Prevents the default blue outline on focus */
+}
+
+.inputChangesMesssage:focus {
+    border: 1px solid #fff;
+    border-bottom:1px solid #000 ;
+}
+
 .clientSaysImage{
     height: 100%;
     width:70%;
    align-self: flex-end;
+}
+.mjiuk{
 }
 .hhxcc{
     padding: 0;
@@ -978,7 +1018,7 @@ align-items: center;
 .mjiuk{
     padding: 0;
     margin: 0; 
-    background-color:rgb(248,248,248);
+    /* background-color:rgb(248,248,248); */
 
 }
 .cdf{

@@ -165,7 +165,7 @@ const [startCount,setStartCount]=useState(false)
                 </div>
                 <form className="form-inline">
                     <button
-                        className="btn btn-outline-light my-2 my-sm-0 px-5 py-3 d-none d-md-block text-gap"
+                        className="btn btn-outline-light my-0 my-sm-0 px-5  py-3 d-none d-md-block text-gap bnvc"
                         type="submit"
                     >
                         Join Us
@@ -611,14 +611,14 @@ At Weider, we are dedicated to creating champions and transforming lives. Our gy
 <div className='container-fluid'>
 <div className='row'>
 <div className='col-6 hhxcc'>
-<img src={'https://e1.pxfuel.com/desktop-wallpaper/146/993/desktop-wallpaper-fitness-motivation-women-workout-on-greepx-womens-gym.jpg'} className='clientSaysImage'/>
+<img src={icons.clisentSay} className='clientSaysImage'/>
 
 </div>
 <div className='col-6  mjiuk'>
 
   <div className='clentSayscont  bvcff'>
-  <h1 className='tecfalign'>WHAT<br/>CLIENTS SAY</h1>
-<div className=' col-7'>
+  <h1 className='tecfalign '>WHAT<br/>CLIENTS SAY</h1>
+<div className=' col-11 px-3'>
 <OwlCarousel  className="owl-theme1 " {...options2} >
   {clientSays.map((ele)=>{
     return(
@@ -636,6 +636,19 @@ At Weider, we are dedicated to creating champions and transforming lives. Our gy
 </div>
 </div>
 
+</div>
+<div className='container-fluid klm'>
+<h1>GET IN TOUCH</h1>
+<div className='col-6'>
+<input className='inputChanges ' placeholder='Name'/>
+<input className='inputChanges' placeholder='Email'/>
+
+<input className='inputChanges' placeholder='PhoneNumber' />
+<input className='inputChangesMesssage' placeholder='Message'/>
+
+
+</div>
+<div className='col-6'></div>
 </div>
 </div>
     )
