@@ -5,7 +5,7 @@ import { TitleSubtitle } from '../TitleSubtitle'
 const ClientRatingsCard:FC<ClientRatingsCardProps>=()=>{
     let RatingStar=[1,1,1,1,1]
     return(
-<div className='container kdkfd'>
+<div className='container kdkfd '>
 
 <div className="col-12 ">
 <div className="d-flex align-items-center gap-2">

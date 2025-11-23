@@ -18,6 +18,7 @@ import { icons } from '../../../Assest';
 import { LineText } from '../../../Components/LineText';
 import { GoArrowRight } from "react-icons/go";
 import CountUp from 'react-countup';
+import { ImageWithText } from '../../../Components/ImageWithText';
 const HomeScreen:FC<HomeProps>=()=>{
   const [drawerOpen, setDrawerOpen] = useState(false);
 
@@ -351,28 +352,35 @@ At Weider, we are dedicated to creating champions and transforming lives. Our gy
 
 <div className='container-md py-5'>
   <div className='row'>
-<div data-aos="fade-right" className='col-lg-6  col-sm-12 '>
-<img className='imageConatinerAbout' src={icons.AboutImage}/>
+<div  className='col-lg-6  col-sm-12 '>
+<div className='featursStyle px-3 mx-2 opp'>
+    <h1  className='text-white defaultFontFamily fontWefff text-gap'>ABOUT US</h1>
+    <p  className=' paragraphText defaultFontFamily text-white text-gap'>Achieve your fitness goals with flexible membership plans<br/> tailored to suit your needs and budget.</p>
+     <p>
 
+Cras at cursus lorem, ac blandit leo. Morbi pulvinar orci dui, vitae laoreet arcu ultricies at. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.tempus.
+    </p>
+     <p>
 
-</div>
-<div data-aos="fade-up" className='col-lg-6  col-sm-12 pb-4 '>
- <h1 className='sectionAboutText'>ABOUT US</h1>
- <h3  className=' paragraphText defaultFontFamily text-white text-gap cdf'>We are best For Fitness & Body building</h3>
-<p className='text-gap cdfa'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate dolores incidunt suscipit. Delectus dolor eius esse explicabo magni omnis porro quo sunt vero voluptas. Deleniti esse, exercitationem fugit, minus mollitia nam nostrum obcaecati provident quam quos, sapiente similique suscipit unde voluptate.</p>
-
-<p className='text-gap cdfa'>Consectetur dolor sit amet adipisicing elit. Aspernatur aut dolor doloribus eligendi eveniet ex exercitationem fugiat illum, iusto magni molestiae nihil quas, quo reiciendis sed sequi tempora tempore vero vitae voluptas? Ad nulla, voluptate!</p>
-<div className='madfg'>
-<button
-    className="btn btn-lightcc   my-5 px-4 py-3 d-none d-md-block text-gap piom"
-    type="submit"
->
-    More About
-</button>
-</div>
-
-
+Fusce dapibus pellentesque pharetra. Phasellus turpis nibh, sagittis quis sollicitudin eget, sollicitudin eget sem. Suspendisse sodales bibendum tellus in rhoncus. Quisque non pellentesque urna, at sodales est. In metus urna, cursus sed porttitor eu, faucibus pulvinar mi.
+    </p>
+   
   </div>
+
+<button
+  className="btn btn-outline-light my-0 my-sm-0 px-3 py-2 d-none d-md-block text-gap bnvcc justify-content-center"
+  type="submit"
+>
+  Contact us
+</button>
+
+</div>
+<div  className='col-lg-6  col-sm-12 pb-4 '>
+
+ <img data-aos="fade-up" className='imageConatinerAbout' src={'	https://netizensstore.com/gymfit_theme/html/multipage_4/assets/images/home_about.webp'}/>
+
+</div>
+  
 
   </div>
 
@@ -610,15 +618,14 @@ At Weider, we are dedicated to creating champions and transforming lives. Our gy
 
 <div className='container-fluid'>
 <div className='row'>
-<div className='col-6 hhxcc'>
-<img src={icons.clisentSay} className='clientSaysImage'/>
-
-</div>
-<div className='col-6  mjiuk'>
+  <div className='col-7  mjiuk '>
 
   <div className='clentSayscont  bvcff'>
-  <h1 className='tecfalign '>WHAT<br/>CLIENTS SAY</h1>
-<div className=' col-11 px-3'>
+
+  <h1 className='text-white defaultFontFamily fontWefff text-gap'>What Customers Say</h1>
+  <h1 className='backgroundText1'>TESTIMONIAL</h1>
+
+<div className=''>
 <OwlCarousel  className="owl-theme1 " {...options2} >
   {clientSays.map((ele)=>{
     return(
@@ -634,6 +641,11 @@ At Weider, we are dedicated to creating champions and transforming lives. Our gy
 
 
 </div>
+<div className='col-5 hhxcc'>
+<img src={icons.clisentSay} className='clientSaysImage'/>
+
+</div>
+
 </div>
 
 </div>
