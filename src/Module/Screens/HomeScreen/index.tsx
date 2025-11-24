@@ -350,23 +350,32 @@ At Weider, we are dedicated to creating champions and transforming lives. Our gy
 </div>
 </div> */}
 
-<div className='container-md py-5'>
+<div className='container my-4'>
   <div className='row'>
-<div  className='col-lg-6  col-sm-12 '>
-<div className='featursStyle px-3 mx-2 opp'>
-    <h1  className='text-white defaultFontFamily fontWefff text-gap'>ABOUT US</h1>
-    <p  className=' paragraphText defaultFontFamily text-white text-gap'>Achieve your fitness goals with flexible membership plans<br/> tailored to suit your needs and budget.</p>
-     <p>
+<div  className='col-lg-6  col-sm-12'>
+<div className='  opp pt-5 '>
+  <div className='aboutTitle'>
+ <h1  className='defaultFontFamily fontWefff'>ABOUT WEIDER</h1>
+    {/* <p  className=''>Achieve your fitness goals with flexible membership plans</p> */}
+  </div>
+   
+    <div className=''>
+  <p className='textFontParagraph aboutparagraph'>
 
 Cras at cursus lorem, ac blandit leo. Morbi pulvinar orci dui, vitae laoreet arcu ultricies at. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.tempus.
     </p>
-     <p>
+    </div>
+   
+     <p className='textFontParagraph aboutparagraph'>
 
 Fusce dapibus pellentesque pharetra. Phasellus turpis nibh, sagittis quis sollicitudin eget, sollicitudin eget sem. Suspendisse sodales bibendum tellus in rhoncus. Quisque non pellentesque urna, at sodales est. In metus urna, cursus sed porttitor eu, faucibus pulvinar mi.
     </p>
-   
   </div>
-
+  <div className='pt-3'>
+ <ImageWithText imge='https://cdn-icons-png.flaticon.com/128/10245/10245142.png' />
+<ImageWithText imge='https://cdn-icons-png.flaticon.com/128/10037/10037891.png'/>
+  </div>
+  
 <button
   className="btn btn-outline-light my-0 my-sm-0 px-3 py-2 d-none d-md-block text-gap bnvcc justify-content-center"
   type="submit"
@@ -616,7 +625,7 @@ Fusce dapibus pellentesque pharetra. Phasellus turpis nibh, sagittis quis sollic
 
 </div>
 
-<div className='container-fluid'>
+{/* <div className='container-fluid'>
 <div className='row'>
   <div className='col-7  mjiuk '>
 
@@ -648,7 +657,29 @@ Fusce dapibus pellentesque pharetra. Phasellus turpis nibh, sagittis quis sollic
 
 </div>
 
+</div> */}
+<div className='container-fluid imksays'>
+<div className='row bg-secondary justify-self-center'>
+
+<div className='col-6 d-flex justify-content-center align-items-center bg-primary'>
+<OwlCarousel  className="owl-theme1 " {...options2} >
+  {clientSays.map((ele)=>{
+    return(
+     
+<ClientRatingsCard/>
+     
+      
+    )
+  })}
+    </OwlCarousel> 
 </div>
+<div className='col-6'>
+
+</div>
+</div>
+
+</div>
+
 <div className='container-fluid klm'>
 <h1>GET IN TOUCH</h1>
 <div className='col-6'>

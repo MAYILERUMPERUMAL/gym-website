@@ -507,6 +507,7 @@ font-size: 30px;
 
 
 
+
 .HomeContent{
 height: 100px;
 }
@@ -1145,7 +1146,7 @@ align-content: flex-start;
 }
 
 .opp{
-    padding-top: 50px;
+    text-align: start;
 
 }
 .containerFeatureicon{
@@ -1580,4 +1581,29 @@ overflow-x: hidden;
     background: rgba(0, 0, 0, 0.5);
     z-index: 100;
   }
+  .aboutTitle h1 {
+  margin-bottom: 5px !important;  /* reduce gap */
+  padding: 0;
+}
+
+.aboutTitle p {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+.aboutparagraph{
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+
+}
+.imksays{
+   background-image: url('https://thewebmax.org/zymmy/images/background/bg3.jpg');
+background-repeat: no-repeat;
+/* background-attachment: fixed; */
+ /* background-color:black; */
+background-size: cover;
+/* background-position: calc(50% - -10px) center; */
+/* margin: 0px;  */
+height: 100vh;
+}
   
